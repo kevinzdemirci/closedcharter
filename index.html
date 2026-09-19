@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Closed Charter Conservator Hub</title>
+<meta name="description" content="One-page desk reference for a TEA-appointed closed-charter conservator: handbook, directives, forms, statutes, rules, federal property, records, best practices, and TEA contacts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+body{font-size:14px}
+</style>
+<style>
+:root{
+  color-scheme:light;
+  --bg:#f4f3ee; --card:#ffffff; --card-2:#faf9f5; --line:#dcd9cf; --line-2:#ebe9e1;
+  --ink:#1b222c; --ink-2:#4e5866; --ink-3:#7a8390;
+  --accent:#1c5cab; --accent-ink:#ffffff; --accent-soft:#e3edf9;
+  --series:#2a78d6; --series-soft:#cde2fb;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b;
+  --good-soft:#e2f5e2; --warn-soft:#fdf1d6; --serious-soft:#fbe5dc; --critical-soft:#f9dddd;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --radius:6px; --shadow:0 1px 2px rgba(27,34,44,.06),0 1px 1px rgba(27,34,44,.04);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#15181c; --card:#1e2227; --card-2:#232830; --line:#353b45; --line-2:#2b3039;
+    --ink:#eeede6; --ink-2:#b9b7ad; --ink-3:#8a8f98;
+    --accent:#6ea6ef; --accent-ink:#0f1a2b; --accent-soft:#1f3350;
+    --series:#3987e5; --series-soft:#1f3a5c;
+    --good-soft:#173a17; --warn-soft:#4a3810; --serious-soft:#4d2a1c; --critical-soft:#4a1f1f;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#15181c; --card:#1e2227; --card-2:#232830; --line:#353b45; --line-2:#2b3039;
+  --ink:#eeede6; --ink-2:#b9b7ad; --ink-3:#8a8f98;
+  --accent:#6ea6ef; --accent-ink:#0f1a2b; --accent-soft:#1f3350;
+  --series:#3987e5; --series-soft:#1f3a5c;
+  --good-soft:#173a17; --warn-soft:#4a3810; --serious-soft:#4d2a1c; --critical-soft:#4a1f1f;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;padding-inline:16px;padding-block:0 48px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0}
+h1{font-size:28px;font-weight:700;letter-spacing:-.01em;line-height:1.15}
+h2{font-size:21px;font-weight:600;margin-bottom:4px}
+h3{font-size:15.5px;font-weight:600}
+p{margin:0}
+.wrap{max-width:1240px;margin:0 auto}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.muted{color:var(--ink-2)}
+.small{font-size:12.5px}
+code,.cite{font-family:var(--mono);font-size:12px}
+.cite{white-space:nowrap}
+
+/* header + nav */
+.masthead{padding-block:28px 14px;display:flex;flex-wrap:wrap;gap:16px 24px;align-items:flex-end;justify-content:space-between;border-bottom:2px solid var(--ink)}
+.masthead .lede{max-width:64ch;color:var(--ink-2);margin-top:6px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:var(--ink-2)}
+.meta b{color:var(--ink);font-weight:600}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-16px;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px 6px;align-items:center}
+.nav a{font-size:12.5px;font-weight:500;color:var(--ink-2);padding:5px 9px;border-radius:999px;border:1px solid transparent}
+.nav a:hover{background:var(--card);border-color:var(--line);text-decoration:none;color:var(--ink)}
+.nav .search{margin-left:auto;display:flex;gap:6px;align-items:center;flex:1 1 260px;max-width:420px}
+.nav input{flex:1;min-width:0;padding:7px 10px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);color:var(--ink);font:inherit;font-size:13px}
+.nav .count{font-family:var(--mono);font-size:11px;color:var(--ink-3);white-space:nowrap}
+
+section{padding-block:28px 6px;scroll-margin-top:64px}
+.sec-head{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+.sec-head p{color:var(--ink-2);max-width:78ch}
+
+/* KPI tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.tile .v{font-family:var(--serif);font-size:30px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums;margin:4px 0 2px}
+.tile .l{font-size:12.5px;color:var(--ink-2)}
+.tile .src{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);margin-top:6px}
+
+/* timeline */
+.timeline{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:18px}
+.phase{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--series);border-radius:var(--radius);padding:10px 12px;min-width:0}
+.phase .n{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
+.phase .t{font-family:var(--serif);font-weight:600;font-size:14.5px;margin:2px 0 4px;line-height:1.2}
+.phase .c{font-size:12px;color:var(--ink-2)}
+.phase ul{margin:6px 0 0;padding-left:16px;font-size:12px;color:var(--ink-2)}
+.phase li{margin:2px 0}
+@media (max-width:1000px){.timeline{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:640px){.timeline{grid-template-columns:repeat(2,1fr)}}
+
+/* charts */
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-top:14px}
+.chart{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.chart h3{margin-bottom:2px}
+.chart .sub{font-size:12px;color:var(--ink-2);margin-bottom:10px}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart .bar{fill:var(--series)}
+.chart .bar:hover{fill:var(--accent)}
+.chart .lbl{font-family:var(--sans);font-size:12px;fill:var(--ink)}
+.chart .val{font-family:var(--mono);font-size:11.5px;fill:var(--ink-2)}
+.chart .grid{stroke:var(--line-2);stroke-width:1}
+.chart .axis{stroke:var(--line);stroke-width:1}
+.chart .tick{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:6px 9px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:50;max-width:280px;display:none}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:6px;min-width:0}
+.card h3 a{color:var(--ink)}
+.card .kind{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.card .desc{color:var(--ink-2);font-size:13px}
+.card .path{font-family:var(--mono);font-size:11px;color:var(--ink-3);word-break:break-all}
+.card .links{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:12.5px;margin-top:auto;padding-top:4px}
+.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2);background:var(--card-2)}
+
+.pill.tea{background:var(--series-soft);border-color:transparent;color:var(--ink)}
+.pill.good{background:var(--good-soft);border-color:transparent}
+.pill.warn{background:var(--warn-soft);border-color:transparent}
+.pill.serious{background:var(--serious-soft);border-color:transparent}
+.pill.critical{background:var(--critical-soft);border-color:transparent}
+
+/* tables */
+.tablewrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--card-2);position:sticky;top:0}
+th.sort{cursor:pointer;user-select:none}
+th.sort:hover{color:var(--ink)}
+td{padding:9px 12px;border-bottom:1px solid var(--line-2);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:var(--card-2)}
+td.num{font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:12px;white-space:nowrap}
+.tbl-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.tbl-tools select,.tbl-tools input{padding:6px 9px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card);color:var(--ink);font:inherit;font-size:13px}
+.tbl-tools .count{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-left:auto}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink-2);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* two-column notes */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.note{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow)}
+.note ol,.note ul{margin:6px 0 0;padding-left:20px;color:var(--ink-2);font-size:13px}
+.note li{margin:4px 0}
+.note li b{color:var(--ink);font-weight:600}
+.steps{counter-reset:s;list-style:none;padding:0;margin:8px 0 0;display:grid;gap:8px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;font-size:13px;color:var(--ink-2)}
+.steps li::before{content:counter(s);font-family:var(--mono);font-size:12px;color:var(--accent);background:var(--accent-soft);width:26px;height:26px;border-radius:50%;display:grid;place-items:center}
+.steps li b{color:var(--ink);font-weight:600}
+
+/* contacts */
+.contacts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.contact{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--series);border-radius:var(--radius);padding:14px 16px;box-shadow:var(--shadow);min-width:0}
+.contact .org{font-family:var(--serif);font-weight:600;font-size:15px}
+.contact .role{font-size:12.5px;color:var(--ink-2);margin-bottom:8px}
+.contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:3px 10px;font-size:13px}
+.contact dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-3);padding-top:3px}
+.contact dd{margin:0;word-break:break-word}
+.contact .use{margin-top:8px;font-size:12.5px;color:var(--ink-2);border-top:1px dashed var(--line);padding-top:8px}
+.contact.esc{border-left-color:var(--serious)}
+.contact.other{border-left-color:var(--ink-3)}
+
+.hidden-by-search{display:none !important}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:var(--ink-3);display:flex;flex-wrap:wrap;gap:6px 18px}
+@media (prefers-reduced-motion:no-preference){.chart .bar{transition:fill .15s}}
+@media print{.nav,.tip{display:none}body{background:#fff}.card,.tile,.chart,.note,.contact,.tablewrap{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+<header class="masthead">
+  <div>
+    <div class="eyebrow">Texas Education Agency · Division of Governance Interventions · Closed charter placements</div>
+    <h1>Closed Charter Conservator Hub</h1>
+    <p class="lede">Every TEA handbook, directive, form, statute, rule, federal disposition step, records requirement, and agency contact tied to a closed-charter conservator placement, on one page. Compiled from the 2024 Closed Charter Handbook, the Comprehensive Closed Charter Checklist, TEA's Closed Charter Forms package, and TEA's current web pages.</p>
+  </div>
+  <div class="meta">
+    <span>Desk reference for <b>TEA-appointed conservators</b> of closing charter schools</span>
+    <span>Compiled <b>September 16, 2026</b></span>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Sections">
+  <a href="#overview">Overview</a>
+  <a href="#deadlines">Deadlines</a>
+  <a href="#checklist">Checklist</a>
+  <a href="#guidance">Handbook &amp; guidance</a>
+  <a href="#forms">Forms</a>
+  <a href="#folder">Resources folder</a>
+  <a href="#law">Statutes &amp; rules</a>
+  <a href="#federal">Federal property</a>
+  <a href="#records">Records</a>
+  <a href="#practices">Best practices</a>
+  <a href="#contacts">Contacts</a>
+  <div class="search">
+    <input id="q" type="search" placeholder="Search everything on this page…" aria-label="Search the page">
+    <span class="count" id="qcount"></span>
+  </div>
+</nav>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="sec-head">
+    <h2>Overview</h2>
+    <p>What the placement is measured against. Counts come from the 2024 handbook and the 116-row Comprehensive Closed Charter Checklist that TEA mirrors in SmartSheet.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="l">Checklist actions</div><div class="v">116</div><div class="l">54 owned by the superintendent, 33 by the conservator, 16 shared</div><div class="src">Comprehensive Closed Charter Checklist (xlsx)</div></div>
+    <div class="tile"><div class="l">Handbook forms &amp; exemplars</div><div class="v">28</div><div class="l">Pages 48–99 of the 2024 handbook</div><div class="src">Closed Charter Handbook 09-10-24</div></div>
+    <div class="tile"><div class="l">Conservator rate</div><div class="v">$250<span style="font-size:15px;font-weight:500">/hr</span></div><div class="l">$50/hr travel over one hour each way · $0.70/mile · $2,000/day cap</div><div class="src">Closed Charter Expense Report Instructions</div></div>
+    <div class="tile"><div class="l">Monthly reports due</div><div class="v">5th</div><div class="l">Progress report and expense report to the Closed Charter Property Coordinator; paid by the 15th</div><div class="src">Expense Report Instructions · Checklist item 111</div></div>
+    <div class="tile"><div class="l">Closure goal</div><div class="v">1 yr</div><div class="l">From conservator placement to TEA's Official Closure Memo; conservator reviewed every 90 days</div><div class="src">Handbook p. 10, 12 · TEC §39A.003(b)</div></div>
+    <div class="tile"><div class="l">Final AFR window</div><div class="v">150 d</div><div class="l">After fiscal year end. FYE June 30 → due November 27; FYE August 31 → due January 28</div><div class="src">TEC §44.008 · Handbook p. 20, 74</div></div>
+  </div>
+
+  <div class="timeline" aria-label="Closure phases">
+    <div class="phase"><div class="n">Phase 1</div><div class="t">Prior to placement</div><div class="c">6 checklist actions · TEA</div><ul><li>Notice of intent to revoke; informal review</li><li>Commissioner decision; SOAH option (90 days)</li><li>Conservator selected by skill set and location</li></ul></div>
+    <div class="phase"><div class="n">Phase 2 · Days 1–5</div><div class="t">Upon placement</div><div class="c">41 actions · Directives I</div><ul><li>Placement conference, onsite meeting</li><li>Board resolution: conservator signatory, others removed</li><li>Freeze spending; cancel cards and ACH</li><li>Notify parents, staff, TRS</li></ul></div>
+    <div class="phase"><div class="n">Phase 3</div><div class="t">First month</div><div class="c">9 actions</div><ul><li>Hire CPA for final AFR (10 days)</li><li>Capital-asset, real-property, vehicle inventories</li><li>Benefits and contract terminations; TWC mass claims</li></ul></div>
+    <div class="phase"><div class="n">Phase 4</div><div class="t">Ongoing</div><div class="c">Written consent on every transaction</div><ul><li>Grants placed on global hold; high-risk status</li><li>Monthly progress and expense reports</li><li>Evidence uploaded to SharePoint</li></ul></div>
+    <div class="phase"><div class="n">Phase 5</div><div class="t">Immediately after classes end</div><div class="c">18 actions · Directives II</div><ul><li>Final report cards, AARs, TAMS codes</li><li>Inventory into lots; textbooks stacked</li><li>TRS status; testing materials returned</li><li>FERPA wipe of devices</li></ul></div>
+    <div class="phase"><div class="n">Phase 6</div><div class="t">Month after classes end</div><div class="c">16 actions</div><ul><li>Records boxed for local ESC pickup</li><li>Creditors paid within 60 days; affidavit</li><li>W-2s/1099s within 30 business days</li><li>PEIMS summer collection; FER/APR</li></ul></div>
+    <div class="phase"><div class="n">Phase 7</div><div class="t">After closure</div><div class="c">20 actions · Conservator/BOM</div><ul><li>Records to ESC Region 13</li><li>Federal inventory approved in EDGAR Connect</li><li>Real property secured, insured, disposed</li><li>Remaining funds wired to TEA; AskTED closed</li></ul></div>
+  </div>
+
+  <div class="charts">
+    <div class="chart">
+      <h3>Checklist actions by phase</h3>
+      <div class="sub">116 actions in the Comprehensive Closed Charter Checklist, grouped by the "General Timeline" column</div>
+      <div id="chart-phase"></div>
+    </div>
+    <div class="chart">
+      <h3>Checklist actions by owner</h3>
+      <div class="sub">Who the checklist assigns each action to. "Shared" means the conservator plus the superintendent, TEA, or the board.</div>
+      <div id="chart-owner"></div>
+    </div>
+  </div>
+</section>
+
+<!-- DEADLINES -->
+<section id="deadlines">
+  <div class="sec-head">
+    <h2>Deadlines the directives set</h2>
+    <p>Every dated requirement in Conservator Directives I and II, the expense instructions, the property statutes, and the federal disposition process. Urgency is relative to the trigger event, not today's date.</p>
+  </div>
+  <div class="tbl-tools">
+    <div class="chips" id="dl-chips">
+      <button class="chip" aria-pressed="true" data-f="all">All</button>
+      <button class="chip" aria-pressed="false" data-f="Directives I">Directives I</button>
+      <button class="chip" aria-pressed="false" data-f="Directives II">Directives II</button>
+      <button class="chip" aria-pressed="false" data-f="Reporting">Reporting</button>
+      <button class="chip" aria-pressed="false" data-f="Property">Property</button>
+      <button class="chip" aria-pressed="false" data-f="Records">Records</button>
+      <button class="chip" aria-pressed="false" data-f="Finance">Finance</button>
+    </div>
+    <span class="count" id="dl-count"></span>
+  </div>
+  <div class="tablewrap">
+    <table id="dl-table">
+      <thead><tr><th class="sort" data-k="days">Window</th><th class="sort" data-k="trigger">Counted from</th><th class="sort" data-k="what">Requirement</th><th>Owner</th><th class="sort" data-k="group">Source</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section id="checklist">
+  <div class="sec-head">
+    <h2>Comprehensive Closed Charter Checklist</h2>
+    <p>All 116 actions from TEA's checklist workbook, which is the same list the agency customizes for each closing charter in SmartSheet. Filter by phase, owner, or topic; the page search also applies here.</p>
+  </div>
+  <div class="tbl-tools">
+    <select id="ck-phase" aria-label="Filter by phase"><option value="">All phases</option></select>
+    <select id="ck-owner" aria-label="Filter by owner"><option value="">All owners</option></select>
+    <select id="ck-topic" aria-label="Filter by topic"><option value="">All topics</option></select>
+    <input id="ck-q" type="search" placeholder="Filter actions…" aria-label="Filter checklist actions">
+    <span class="count" id="ck-count"></span>
+  </div>
+  <div class="tablewrap" style="max-height:560px;overflow:auto">
+    <table id="ck-table">
+      <thead><tr><th>#</th><th>Phase</th><th>Action</th><th>Owner</th><th>Topic</th><th>TEA notes</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- GUIDANCE -->
+<section id="guidance">
+  <div class="sec-head">
+    <h2>Handbook &amp; guidance documents</h2>
+    <p>The governing documents, in the order a placement uses them. Cards marked TEA link to the live agency page; the others are documents in TEA's closed-charter package that TEA issues to the conservator at placement.</p>
+  </div>
+  <div class="grid" id="guidance-grid">
+    <div class="card"><div class="kind"><span class="pill">Handbook · 100 pp</span></div><h3>Closed Charter Handbook (Sept 10, 2024)</h3><p class="desc">The current Governance Interventions handbook: how charters close (revocation, non-renewal, surrender), the revocation timeline, Conservator Directives I and II in full, the 116-item closeout checklist, and 28 forms and exemplars. Supersedes the 2021 edition.</p><div class="links"></div></div>
+    <div class="card"><div class="kind"><span class="pill">Handbook · 42 pp</span></div><h3>Charter Closeout Handbook (July 2021)</h3><p class="desc">Prior edition from the Division of Sanction Monitoring. Same skeleton (Directives I/II, chain of custody, transfer of chattel, vendor letter) with a numbered Appendix 1 of closeout items that older TEA correspondence still cites by item number.</p><div class="links"></div></div>
+    <div class="card"><div class="kind"><span class="pill">Checklist · xlsx</span></div><h3>Comprehensive Closed Charter Checklist</h3><p class="desc">116 actions with topic, timeline, owner, and TEA comments. TEA customizes this in SmartSheet per closing charter, attaches the blank forms to each action, and has the conservator upload "proof" evidence against each row. The Checklist section above is built from this file.</p><div class="links"></div></div>
+    <div class="card"><div class="kind"><span class="pill">Instructions · 2 pp</span></div><h3>Closed Charter Expense Report Instructions</h3><p class="desc">Rates ($250/hr, $50/hr travel, $0.70/mile, $2,000/day cap), quarter-hour increments, aggregate email time, maps required for mileage, no tips, signature page rules when TEA Accounts Payable pays. Reports due by the 5th to SharePoint or Stacey Selman.</p><div class="links"></div></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">Job description</span></div><h3>Monitor, Conservator, and Management Team Job Description</h3><p class="desc">Essential functions, work products (needs assessment in 8 weeks, monthly progress and expense reports), compensation under TEC §39A.903 and §39A.251, time commitment (about 100 hrs/month for six months), and the Closed Charters qualification profile, including bond-funding knowledge.</p><div class="links"><a href="https://tea.texas.gov/health-safety-and-discipline/school-boards/school-governance/mc-job-description-1.pdf">TEA PDF</a><a href="https://tea.texas.gov/health-safety-and-discipline/school-boards/school-governance/monitors-and-conservators">Monitors and Conservators page</a></div></div>
+    <div class="card"><div class="kind"><span class="pill">Process · 2 pp</span></div><h3>Federal Property Disposition Process</h3><p class="desc">TEA's step list for federally funded property: inventory by program, classify equipment vs. supplies under 2 CFR 200.1, value against the $5,000 threshold, file the EDGAR Connect WorkApp form first, sell and remit proceeds. Includes Q&amp;A on unsellable items, landlord evictions, and lienholders.</p><div class="links"></div></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">Guidelines</span></div><h3>General and Fiscal Guidelines (grants on/after July 1, 2021)</h3><p class="desc">TEA's grant administration rules: obligation of funds, procurement, equipment acquisition and disposition, record retention, reporting. The closeout checklist cites it for both grant compliance during closure and disposition of grant-purchased equipment. A July 1, 2025 edition is now posted.</p><div class="links"><a href="https://tea.texas.gov/data-reports/grants/grants-administration/general-and-fiscal-guidelines-7-1-2025-and-after.pdf">2025 edition (TEA)</a><a href="https://tea.texas.gov/finance-and-grants/grants/grants-administration/guidelines-provisions-and-assurances">Guidelines, Provisions, and Assurances</a></div></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">FAQ</span></div><h3>EDGAR Frequently Asked Questions (v7)</h3><p class="desc">TEA's formal guidance on the Uniform Grant Guidance (2 CFR 200): inventory management, equipment and supplies disposition, record retention, allowability. The handbook's "Formal TEA guidance on disposition" link.</p><div class="links"><a href="https://tea.texas.gov/finance-and-grants/grants/edgar-materials-and-resources">EDGAR Materials and Resources (TEA)</a></div></div>
+    <div class="card"><div class="kind"><span class="pill">Definitions</span></div><h3>2 CFR 200.1 Definitions of Equipment and Supplies</h3><p class="desc">Equipment: useful life over one year and per-unit cost at or above the lesser of the local capitalization level or $5,000. Everything else is supplies. Also sets the order of preference for reuse, the over/under $5,000 disposition rules, and names Nick Davis as the TEA contact for the EDGAR Connect WorkApp forms.</p><div class="links"><a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-A/subject-group-ECFR2a6a0e307c3f0e1/section-200.1">eCFR §200.1</a></div></div>
+    <div class="card"><div class="kind"><span class="pill">Flowchart</span></div><h3>Revocation Protocol Flowchart (v4)</h3><p class="desc">Internal TEA flow from preliminary ratings through Charter Administration memo, Commissioner letters, informal review, SOAH docketing by March 15, final order, conservator placement, Board of Managers notification, DIVDIR and TRS notices, and the Federal Fiscal Monitoring high-risk designation.</p><div class="links"></div></div>
+    <div class="card"><div class="kind"><span class="pill">Instructions</span></div><h3>Instructions for creating electronic student files</h3><p class="desc">The commissioner-designated custodian process: one directory per student (####LastName_FirstName), SIS extract to TREx-format XML, attachment naming codes (im, gt, ms91 for IEPs), 32 MB file limit, and delivery on a flash drive within 10 days of closure. Cites 13 TAC §7.125 and 19 TAC §100.1203(b).</p></div>
+    <div class="card"><div class="kind"><span class="pill">Directive · template</span></div><h3>Conservator Directive: Records Management</h3><p class="desc">A records directive drafted for issue under the conservator's authority: scope (student, staff, business records), retention minimums, ESC transfer within 30 days of closure, certificate of destruction, FERPA access limits, and non-compliance consequences. Summarized in the Records section below.</p></div>
+    <div class="card"><div class="kind"><span class="pill">Working notes</span></div><h3>Charter Closeout Checklist (SmartSheet notes copy)</h3><p class="desc">An annotated working copy of the checklist organized by phase (prior to closure, immediately upon revocation, first week, first month, ongoing, after classes end, month after, after closure) with TEA's margin notes, for example that securing property "should happen at the beginning shortly after revocation".</p></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">Web page</span></div><h3>Charter School Closures</h3><p class="desc">TEA's public closure page: Board of Managers role, records custodian (ESC 13), public meeting notices for closed charters (Academy of Dallas, Bridgeway Preparatory, The Gathering Place, Texas Serenity, Waco Charter), and the Summary of Awards and Closures PDF.</p><div class="links"><a href="https://tea.texas.gov/texas-schools/texas-schools-charter-schools/charter-school-closures">Charter School Closures</a><a href="https://tea.texas.gov/texas-schools/texas-schools-charter-schools/summary-of-awards-and-closures-1.pdf">Summary of Awards and Closures (PDF)</a></div></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">Web page</span></div><h3>Governance Interventions &amp; Board of Managers</h3><p class="desc">The Division's home page (intervention types, what to expect), the Monitors and Conservators page with the application link, and the Board of Managers page with TAC §97.1073 and TEC §39A.004/.006/.256 references and current BOM districts.</p><div class="links"><a href="https://tea.texas.gov/texas-schools/school-boards/school-governance">Governance Interventions</a><a href="https://tea.texas.gov/health-safety-and-discipline/school-boards/school-governance/monitors-and-conservators">Monitors and Conservators</a><a href="https://tea.texas.gov/health-safety-and-discipline/school-boards/school-governance/board-managers">Board of Managers</a><a href="https://tea.co1.qualtrics.com/jfe/form/SV_5nL31QPmNFnWs50">Appointee application (Qualtrics)</a></div></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">Web page</span></div><h3>Annual Financial and Compliance Report (AFR)</h3><p class="desc">Due dates (150 days after FYE), TEAL AUDIT submission (PDF plus data feed, both required; email does not count), the Audit 2.0 application for FY2025 onward, the external audit firm list, and the Financial Compliance contacts. FY2025 AFRs were extended to February 27, 2026.</p><div class="links"><a href="https://tea.texas.gov/finance-and-grants/financial-compliance/annual-financial-and-compliance-report">AFR page</a><a href="https://tea.texas.gov/data-reports/financial-compliance/cs-govcs-isd-external-audit-firms-0.csv">External audit firms (CSV)</a><a href="https://www.youtube.com/watch?v=sPM78nydlYk">Filing the AFR through TEAL (video)</a></div></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">Web page</span></div><h3>TSDS / PEIMS submission timeline</h3><p class="desc">Seven TSDS core collections and four PEIMS submissions run through closure: Fall (Oct snapshot, Dec/Jan), Mid-year financial (Jan/Feb), Summer attendance (Jun/Jul), Extended Year (Aug). Nothing is processed after the August resubmission cutoff; later corrections go to State Funding.</p><div class="links"><a href="https://tealprod.tea.state.tx.us/TWEDS/103/0/0/0/DataSubmission/TimeLine">TWEDS submission timeline</a><a href="https://tealprod.tea.state.tx.us/TWEDS/103/0/0/0/Introduction/List/878">TEDS introduction</a></div></div>
+    <div class="card"><div class="kind"><span class="pill tea">TEA</span><span class="pill">Web page</span></div><h3>Charter Schools Resources &amp; ESC charter contacts</h3><p class="desc">TEA's charter resources page with the statewide table of ESC charter contacts (all 20 regions), the ESC 13 closed-charter records page, the Public Information Request form, and TXschools.gov for the list of nearby schools parents receive.</p><div class="links"><a href="https://tea.texas.gov/school-and-district-information/texas-schools-charter-schools/charter-schools-resources">Charter Schools Resources</a><a href="https://esc13.net/services/charter-school-records-request">ESC 13 records requests</a><a href="https://txschools.gov/?view=schools&amp;lng=en">TXschools.gov</a></div></div>
+    <div class="card"><div class="kind"><span class="pill">Templates</span></div><h3>Conservator progress and expense report templates</h3><p class="desc">TEA issues a monthly expense report workbook and a progress report workbook (placement information, entry conditions, exit criteria, monthly activities, directives log, board interactions). Ask the Closed Charter Property Coordinator for the current year's templates.</p></div>
+  </div>
+</section>
+
+<!-- FORMS -->
+<section id="forms">
+  <div class="sec-head">
+    <h2>Forms &amp; exemplars</h2>
+    <p>The 28 items in the handbook's Forms and Exemplars section (pp. 48–99), matched to the editable copies in the Closed Charter Forms folder where one exists, and to the checklist action that uses each.</p>
+  </div>
+  <div class="tablewrap">
+    <table id="forms-table">
+      <thead><tr><th class="sort" data-k="n">#</th><th class="sort" data-k="name">Form</th><th>Used for</th><th class="sort" data-k="page">Handbook p.</th><th>Editable copy in forms folder</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FOLDER -->
+<section id="folder">
+  <div class="sec-head">
+    <h2>Closed Charter Forms folder</h2>
+    <p>Contents of the TEA-issued Closed Charter Forms package. 24 files. Kinds: templates to fill, reference documents, and TEA process notes.</p>
+  </div>
+  <div class="tbl-tools"><div class="chips" id="folder-chips"><button class="chip" aria-pressed="true" data-f="all">All</button><button class="chip" aria-pressed="false" data-f="Template">Templates</button><button class="chip" aria-pressed="false" data-f="Reference">Reference</button><button class="chip" aria-pressed="false" data-f="Process">Process</button><button class="chip" aria-pressed="false" data-f="Sample">Samples</button></div><span class="count" id="folder-count"></span></div>
+  <div class="tablewrap">
+    <table id="folder-table">
+      <thead><tr><th class="sort" data-k="file">File</th><th class="sort" data-k="kind">Kind</th><th>What it is</th><th class="sort" data-k="kb">Size</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="small muted" style="margin-top:8px">File names refer to the original TEA Closed Charter Forms package; ask the Closed Charter Property Coordinator for the current copies.</p>
+</section>
+
+<!-- LAW -->
+<section id="law">
+  <div class="sec-head">
+    <h2>Statutes &amp; rules</h2>
+    <p>Every statute, rule, regulation, and opinion cited in the handbook, directives, checklist, forms, and TEA's conservator pages, with what it governs in a closure. Texas statute links open the official section on the Legislature's site; TAC links open the rule text.</p>
+  </div>
+  <div class="tbl-tools"><div class="chips" id="law-chips"><button class="chip" aria-pressed="true" data-f="all">All</button><button class="chip" aria-pressed="false" data-f="TEC Ch. 12">TEC Ch. 12 (charters)</button><button class="chip" aria-pressed="false" data-f="TEC Ch. 39A">TEC Ch. 39A (interventions)</button><button class="chip" aria-pressed="false" data-f="TEC other">TEC other</button><button class="chip" aria-pressed="false" data-f="19 TAC">19 TAC rules</button><button class="chip" aria-pressed="false" data-f="Federal">Federal</button><button class="chip" aria-pressed="false" data-f="Other Texas">Other Texas law</button></div><span class="count" id="law-count"></span></div>
+  <div class="tablewrap">
+    <table id="law-table">
+      <thead><tr><th class="sort" data-k="cite">Citation</th><th class="sort" data-k="title">Title</th><th>Role in a closure</th><th class="sort" data-k="group">Body</th><th>Cited by</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FEDERAL -->
+<section id="federal">
+  <div class="sec-head">
+    <h2>Federal property disposition</h2>
+    <p>Property bought with federal grant funds (CSP, ESSA titles, IDEA, ESSER) follows a different track from state-funded property. The handbook's page 70–71 process and the forms-folder process sheet, reconciled.</p>
+  </div>
+  <div class="cols">
+    <div class="note">
+      <h3>The process (Department of Grant Compliance and Administration)</h3>
+      <ol class="steps">
+        <li><span><b>Inventory by program.</b> Identify every item bought with federal funds, the dollar amount, and the federal program the funds came from. Build the Master Federal Inventory List from the Directives I equipment inventory (state / federal / local lots).</span></li>
+        <li><span><b>Submit the inventory list to TEA</b> and ask Federal Compliance for access to the EDGAR Connect WorkApp. Contact: Nick Davis.</span></li>
+        <li><span><b>Classify under 2 CFR 200.1.</b> Equipment (vehicles, long-lived items) is listed per item at fair market value. Supplies (desks, PE items) may be valued in aggregate.</span></li>
+        <li><span><b>Check the threshold.</b> Use the LEA's local capitalization policy if lower; otherwise the federal $5,000 per-unit line. Over $5,000 and under $5,000 use different WorkApp forms.</span></li>
+        <li><span><b>File the WorkApp form first.</b> Filing constitutes "requesting instructions" for disposition. Approval (Federal Grants Division) is tracked in SmartSheet; the target is 45 days or less. Do not sell or give anything away before approval.</span></li>
+        <li><span><b>Over $5,000:</b> the superintendent for closure sells the item and remits proceeds to TEA for refund to the federal government.</span></li>
+        <li><span><b>Under $5,000:</b> distribute per local policy with no refund, or if no policy: (1) A/B-rated charters, (2) other charters, (3) ISDs via an ESC posting, (4) local non-profits.</span></li>
+        <li><span><b>Acquisition by another charter:</b> inventory all assets, flag the federal ones, and submit a WorkApp transfer request instead of steps 6–7.</span></li>
+      </ol>
+    </div>
+    <div class="note">
+      <h3>Rules TEA states plainly</h3>
+      <ul>
+        <li><b>All federal property is sold and proceeds remitted</b> to the federal government; it cannot be given away like state-funded property.</li>
+        <li><b>Forms come before buyers.</b> The closed charter does not need to know who will receive the property to file.</li>
+        <li><b>Cannot be rolled into a real-property sale</b> even if the buyer pays valuation for it.</li>
+        <li><b>Unsellable items:</b> re-evaluate fair market value; if now under $5,000, file the under-threshold form and document the failed sale attempt.</li>
+        <li><b>Landlord wants it out?</b> The LEA warehouses the items until disposition is approved.</li>
+        <li><b>Lienholders</b> cannot be paid from proceeds of federally purchased property. Money owed to the federal government takes precedence.</li>
+        <li><b>Residual supplies over $5,000 aggregate</b> at closeout: retain for other federal awards or sell, compensating USDE for its share (2 CFR 200.314).</li>
+        <li><b>Grants go on a global hold</b> and the charter is designated short-term high risk at revocation; TEA sends the conservator instructions for accessing grant funds. Name the TEAL authorized official for federal grant applications.</li>
+        <li><b>Also due:</b> Federal Expenditure Reports (FER), the Annual Performance Report (APR), and Form 269/269a under 34 CFR 80.41 if funds came directly from USDE.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- RECORDS -->
+<section id="records">
+  <div class="sec-head">
+    <h2>Records: student, staff, and business</h2>
+    <p>Who keeps what after closure, and the chain of custody TEA expects. ESC Region 13 is the commissioner-designated custodian for every closed charter in Texas; the ESC for the charter's region is the temporary hand-off point.</p>
+  </div>
+  <div class="cols">
+    <div class="note">
+      <h3>Chain of custody</h3>
+      <ol class="steps">
+        <li><span><b>Within 30 days of notice (best practice):</b> hard copies of student records available for parent pickup: addresses, schedules, transcripts, final report card, classification, discipline, PGP, immunizations, SSN, IEP/504.</span></li>
+        <li><span><b>Immediately after classes end:</b> update AARs, issue final report cards and diplomas, hand out TAMS access codes for STAAR results, finalize attendance data for TEA's attendance audit.</span></li>
+        <li><span><b>Within one month of the last day of classes:</b> box and label every student and staff record (charter name, CDN, box x of xx; indexed alphabetically by year), make two flash-drive copies, and have the local ESC sign the Transfer of Physical and Electronic Records form for the boxes and one drive. The conservator keeps the second drive and the signed form.</span></li>
+        <li><span><b>Within 10 days of closure:</b> deliver the electronic Student Records directory (TREx-format extracts plus scanned attachments) on a flash drive to the conservator or TEA.</span></li>
+        <li><span><b>Within one month of the last day of classes:</b> written confirmation from the ESC or a contractor that FERPA data was wiped from every computer, before any device is redistributed.</span></li>
+        <li><span><b>After closure:</b> the conservator transfers the records from the local ESC to ESC Region 13 (electronic records via TREx). Retain the transfer confirmation forms for the closure evidence file.</span></li>
+      </ol>
+    </div>
+    <div class="note">
+      <h3>Stays with the charter holder (reviewed by superintendent and conservator)</h3>
+      <ul>
+        <li>Board minutes; policy manual; administrative, accounting, and personnel procedures manuals</li>
+        <li>Bank statements with canceled checks; corporate credit card statements and invoices</li>
+        <li>Accounting reports, budgets, journals, ledgers, registers, petty cash reports</li>
+        <li>Independent auditor annual financial reports; IRS forms and support</li>
+        <li>All agreements, contracts, and shared-service arrangements with exhibits and amendments</li>
+        <li>Purchase requisitions and vouchers with invoices and receipts; reimbursement and travel vouchers</li>
+        <li>All teacher schedules; all electronic financial files, including PEIMS submission files</li>
+        <li>Financial records must be kept for audit under applicable retention schedules and remain the charter holder's responsibility; tell TEA where they are stored.</li>
+      </ul>
+      <h3 style="margin-top:14px">Goes to the ESC</h3>
+      <ul>
+        <li>All personnel files, service records, teacher certifications, and a chart of all personnel under contract</li>
+        <li>Student attendance records per the Student Attendance Accounting Handbook, and the electronic attendance files needed for PEIMS</li>
+        <li>All TRS forms and supporting documentation</li>
+        <li>Files containing SSNs secured and labeled CONFIDENTIAL</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tablewrap" style="margin-top:12px">
+    <table>
+      <thead><tr><th>Record type</th><th>Minimum retention</th><th>Authority</th></tr></thead>
+      <tbody>
+        <tr><td>Student transcripts, AARs, scholastic census, accreditation reports</td><td>Permanent</td><td class="cite">13 TAC §7.125(a)(6) · 19 TAC §100.1203(b)</td></tr>
+        <tr><td>Special education records</td><td>7 years post-exit or until age 27</td><td class="cite">IDEA · 34 CFR §300.624</td></tr>
+        <tr><td>Personnel files and payroll</td><td>7 years post-separation</td><td class="cite">Texas Payday Law · IRC §6001</td></tr>
+        <tr><td>Form I-9</td><td>3 years post-hire or 1 year post-separation, whichever is later</td><td class="cite">8 CFR §274a.2</td></tr>
+        <tr><td>Federal grant records</td><td>Retention period after closeout under the Uniform Guidance (TEA grant guidelines apply)</td><td class="cite">2 CFR §200.334 · General and Fiscal Guidelines</td></tr>
+        <tr><td>Board minutes, financials, tax filings</td><td>7 years (minutes permanent)</td><td class="cite">Gov't Code Ch. 441 · local records schedule</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted" style="margin-top:8px">Retention rows come from the local Conservator Records Directive template; confirm each against the Texas State Library local schedule (SD) before relying on it for destruction decisions. No records may be destroyed during litigation, open records requests, audits, or legal holds.</p>
+</section>
+
+<!-- PRACTICES -->
+<section id="practices">
+  <div class="sec-head">
+    <h2>Best practices from the handbook and directives</h2>
+    <p>Guidance TEA states as expectation or lesson learned rather than as a numbered directive.</p>
+  </div>
+  <div class="cols">
+    <div class="note"><h3>Taking control of money on day one</h3><ul>
+      <li><b>Written consent before every transaction:</b> agreements, contracts, purchases, payments, and instructional-materials orders. Say so in writing to leadership.</li>
+      <li><b>Board resolution within 7 days</b> adding the conservator as agent-signatory and removing all other signatories; on the bank card within 3 days after. Unallowable checks written without the conservator's signature can be disputed with the bank.</li>
+      <li><b>Put leadership on notice</b> that unauthorized payments are recovered from the employee's paycheck and referred to SBEC.</li>
+      <li><b>Cancel every credit and debit card;</b> stop ACH payments that should no longer run; later consolidate accounts into one.</li>
+      <li><b>Get usernames and passwords</b> for every financial system, not just view access; ask for organizational charts and system owners at the first onsite meeting.</li>
+      <li><b>Bank statements for six months</b> and a full transaction listing from placement forward for each account, not a summary.</li>
+      <li><b>UCC search</b> for security interests attached to state property; disclose nature and collateral with the creating document.</li>
+      <li><b>Fiduciary withholdings first:</b> IRS, TRS, health insurance. If not current, get total due with penalties, who is owed, and any warrant holds or levies; if current, get a CFO or superintendent affidavit.</li>
+    </ul></div>
+    <div class="note"><h3>Running the closure</h3><ul>
+      <li><b>Directives can be "soft" or dated.</b> If the administration is cooperative and already moving, issue Directives I and II as a general list with minimal deadlines; tighten to set dates when they need it.</li>
+      <li><b>Failure to meet directive deadlines</b> can trigger a Board of Managers; the superintendent's final paycheck is contingent on completing Directives II.</li>
+      <li><b>Remind the charter holder</b> it remains the fiduciary for wind-up obligations and must remit excess funds to the State (TEC §§12.107, 12.122, 12.128, 12.1284; Tex. Const. art. III §52(a); AG Op. GA-0252).</li>
+      <li><b>Expect early-termination fees</b> when cancelling vendor contracts; request final invoices; give the authorizer a copy of the management-company termination.</li>
+      <li><b>One year is the goal.</b> Use the SmartSheet checklist, upload proof against each action, and organize the SharePoint evidence file by the eight-item Final Closure Graph so TEA can issue the Official Closure Memo.</li>
+      <li><b>Keep the insurance policy in force</b> in the charter's name under conservator/BOM control until real property is disposed; pay it on time.</li>
+      <li><b>Secure real property early:</b> change locks, secure vehicles and technology in the most secure rooms, brief local police on trespass, forward mail, keep utilities paid in consultation with TEA, donate food to a TEA-designated non-profit.</li>
+      <li><b>Notify AskTED</b> only after the last PEIMS submission so the charter is made obsolete at the right moment.</li>
+    </ul></div>
+    <div class="note"><h3>Students, staff, and communications</h3><ul>
+      <li><b>Parent and staff letters need specific dates:</b> last day of instruction or employment, last day to obtain records on site, how to get records from ESC 13 afterward, final paycheck date, TEA's list of nearby schools, and extended-year services.</li>
+      <li><b>Post the closure notice</b> on the homepage, at every campus entrance, and wherever board notices are posted; leave it up until the Commissioner's closure date.</li>
+      <li><b>Deliver a full contact database</b> of staff and students to the conservator; TEA may ask for it if the school is slow to notify parents.</li>
+      <li><b>Answer TEA Student Attendance</b> on which attendance system was used, how teachers took official attendance, and the last day of school; the attendance audit and settle-up payment are closure-graph items 1 and 2.</li>
+      <li><b>Terminate summer-extending contracts and programs;</b> arrange Student Success Initiative retesting with a nearby ISD or charter; contact TWC about mass claims.</li>
+      <li><b>Benefits end on the last day of service</b> under COBRA and plan rules; TRS notified with final payment date and service-record verification; consult counsel on HR issues.</li>
+      <li><b>Textbooks:</b> stack in hallways outside classrooms, alternating every five books, title and count on top. Inventory goes into lots by funding source.</li>
+    </ul></div>
+    <div class="note"><h3>Getting paid and reporting</h3><ul>
+      <li><b>Expense and progress reports by the 5th</b> to the school's SharePoint folder or Stacey Selman; processed to the district or TEA Accounts Payable by the 15th.</li>
+      <li><b>Quarter-hour increments;</b> 1 hr 30 min is 1.50, 45 min is .75. Emails may be aggregated (ten 6-minute emails = 1 hour). Describe each task.</li>
+      <li><b>Mileage needs a map</b> matching the miles claimed (Google Maps printed to PDF works; some phone exports do not). One map per repeated route per month.</li>
+      <li><b>No tips</b> on meals, Ubers, or taxis; hotel receipts must match the dates claimed; postage, tolls, and closure supplies such as thumb drives are "Incidentals".</li>
+      <li><b>Who pays:</b> the district until its final FSP payment or until closure if funds allow; when TEA Accounts Payable pays, sign page one by hand or attach a scanned signed copy.</li>
+      <li><b>Progress report structure</b> (exemplar pp. 82–86): placement information, entry conditions, exit criteria goals with goal progress measures, monthly activities, directives log, and board interactions with attendance percentage and meeting length.</li>
+      <li><b>Attend at least 80% of regular board meetings</b> and of any non-closed workshops, hearings, or committees unless TEA directs otherwise.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section id="contacts">
+  <div class="sec-head">
+    <h2>Contacts</h2>
+    <p>TEA divisions and partner agencies a closed-charter conservator deals with, from the handbook, the expense instructions, the forms folder, and TEA's current pages. Blue stripe: TEA. Orange stripe: Education Service Centers. Gray: other agencies.</p>
+  </div>
+  <div class="contacts">
+    <div class="contact"><div class="org">Division of Governance Interventions</div><div class="role">Appoints and supports monitors, conservators, and boards of managers; runs the closure SmartSheet and SharePoint files</div><dl>
+      <dt>Team</dt><dd>Garrett Black, Division Director · Joanne Crompton, Director of Intervention Monitoring · Jonathan Sandlin, Intervention Coordination and Implementation Specialist · Stacey Selman, Closed Charter Property Coordinator</dd>
+      <dt>Email</dt><dd><a href="mailto:SchoolGovernance@tea.texas.gov">SchoolGovernance@tea.texas.gov</a></dd>
+      <dt>Fax</dt><dd>(512) 475-3665</dd>
+      <dt>Address</dt><dd>William B. Travis Building, 1701 N. Congress Ave., Suite 5-128, Austin, TX 78701</dd>
+    </dl><div class="use">Use for: placement questions, directive strategy, closure-plan calls, 90-day reviews, remaining-funds transfer instructions.</div></div>
+    <div class="contact"><div class="org">Stacey Selman, Closed Charter Property Coordinator</div><div class="role">Division of Governance Interventions</div><dl>
+      <dt>Email</dt><dd><a href="mailto:Stacey.selman@tea.texas.gov">Stacey.selman@tea.texas.gov</a></dd>
+      <dt>Due</dt><dd>Expense reports with maps and receipts, and monthly progress reports, by the 5th of each month (SharePoint folder or email)</dd>
+    </dl><div class="use">Use for: monthly reporting, real-property sale coordination when property transfers to the agency, chattel disposition questions, SmartSheet access.</div></div>
+    <div class="contact"><div class="org">Division of Charter School Authorizing and Administration</div><div class="role">Issues revocation and non-renewal notices, conservator placement notices, and the parent list of nearby schools</div><dl>
+      <dt>Email</dt><dd><a href="mailto:charterschools@tea.texas.gov">charterschools@tea.texas.gov</a></dd>
+      <dt>Phone</dt><dd>(512) 463-9575</dd>
+      <dt>Fax</dt><dd>(512) 463-9732</dd>
+      <dt>AskTED</dt><dd><a href="mailto:CharterAskTED@tea.texas.gov">CharterAskTED@tea.texas.gov</a> (make the charter obsolete after the last PEIMS submission)</dd>
+    </dl><div class="use">Use for: the press release and parent FAQ contact line, student letters, distribution of state property to other charters, AskTED closure.</div></div>
+    <div class="contact"><div class="org">Division of Financial Compliance (AFR)</div><div class="role">Receives the final Annual Financial and Compliance Report through TEAL AUDIT</div><dl>
+      <dt>Email</dt><dd><a href="mailto:schoolaudits@tea.texas.gov">schoolaudits@tea.texas.gov</a></dd>
+      <dt>Phone</dt><dd>(512) 463-9095 · fax (512) 463-1777</dd>
+      <dt>Contact</dt><dd>Paul Moreno, (512) 475-2228, <a href="mailto:paul.moreno@tea.texas.gov">paul.moreno@tea.texas.gov</a></dd>
+    </dl><div class="use">Use for: AFR due dates and extensions, TEAL Audit 2.0 access for the CPA, data-feed finalization problems.</div></div>
+    <div class="contact"><div class="org">Department of Grant Compliance and Administration (federal property)</div><div class="role">Approves federal equipment and supplies disposition through the EDGAR Connect WorkApp</div><dl>
+      <dt>Contact</dt><dd>Nick Davis, <a href="mailto:nick.davis@tea.texas.gov">nick.davis@tea.texas.gov</a> (WorkApp forms and access); approvals issued by the Federal Grants Division and tracked in SmartSheet</dd>
+      <dt>TEA main</dt><dd>(512) 463-9734</dd>
+      <dt>Web</dt><dd><a href="https://tea.texas.gov/finance-and-grants/grants/edgar-materials-and-resources">EDGAR Materials and Resources</a></dd>
+    </dl><div class="use">Use for: Master Federal Inventory List submission, over/under $5,000 forms, transfer requests when another charter acquires assets, grant holds and TEAL authorized-official changes.</div></div>
+    <div class="contact"><div class="org">Board of Managers program</div><div class="role">Division of Governance Interventions</div><dl>
+      <dt>Email</dt><dd><a href="mailto:BoardofManagers@tea.texas.gov">BoardofManagers@tea.texas.gov</a></dd>
+      <dt>Web</dt><dd><a href="https://tea.texas.gov/health-safety-and-discipline/school-boards/school-governance/board-managers">Board of Managers page</a></dd>
+    </dl><div class="use">Use for: BOM appointment after closure (TEC §39A.256), resolutions authorizing the conservator to sell agency-held property, insurance transfer to the BOM.</div></div>
+    <div class="contact"><div class="org">TEA Public Information Office</div><div class="role">Public Information Act requests about the charter after closure</div><dl>
+      <dt>Email</dt><dd><a href="mailto:PIR@tea.texas.gov">PIR@tea.texas.gov</a></dd>
+      <dt>Phone</dt><dd>(512) 463-3464 · fax (512) 463-9838</dd>
+      <dt>Form</dt><dd><a href="https://tealprod.tea.state.tx.us/Pirts/Public/NewPendingPIR.aspx">Online PIR form</a></dd>
+    </dl><div class="use">Use for: routing third-party records requests that are not student or personnel records.</div></div>
+    <div class="contact"><div class="org">Texas Education Agency (main)</div><div class="role">Agency headquarters</div><dl>
+      <dt>Address</dt><dd>1701 N. Congress Avenue, Austin, TX 78701</dd>
+      <dt>Phone</dt><dd>(512) 463-9734</dd>
+      <dt>Web</dt><dd><a href="https://tea.texas.gov/about-tea/contact-us/contact-us">Contact Us</a> · <a href="https://tealprod.tea.state.tx.us/">TEAL login</a> · <a href="https://helpdesk.tea.texas.gov/">TEA Help Desk</a></dd>
+    </dl></div>
+    <div class="contact esc"><div class="org">ESC Region 13, Closed Charter Records</div><div class="role">Commissioner-designated custodian of student and personnel records for every closed Texas charter</div><dl>
+      <dt>Contact</dt><dd>Priscilla Diaz, Records Specialist</dd>
+      <dt>Email</dt><dd><a href="mailto:priscilla.diaz@esc13.txed.net">priscilla.diaz@esc13.txed.net</a></dd>
+      <dt>Phone</dt><dd>(512) 919-5418 · fax (512) 926-4406</dd>
+      <dt>Address</dt><dd>5701 Springdale Road, Austin, TX 78723</dd>
+      <dt>Forms</dt><dd><a href="https://esc13.net/assets/uploads/docs/Student_Records_Request_6.7.17.pdf">Student records request</a> · <a href="https://esc13.net/assets/uploads/docs/Personnel_Records_Request_1.27.16.pdf">Personnel records request</a> · <a href="https://esc13.net/services/charter-school-records-request">Records page</a></dd>
+    </dl><div class="use">Use for: final transfer of records from the local ESC, the parent/staff letters' "after closure" contact, the press release phone number.</div></div>
+    <div class="contact esc"><div class="org">Your local Education Service Center</div><div class="role">Temporary records pickup, FERPA device wipe, ISD postings for state property</div><dl><dt>Contact</dt><dd>The charter contact for the closing charter's ESC region</dd><dt>Directory</dt><dd><a href="https://tea.texas.gov/school-and-district-information/texas-schools-charter-schools/charter-schools-resources">TEA Charter Schools Resources</a> lists a charter contact, phone, and email for every ESC region</dd><dt>Map</dt><dd><a href="https://tea.texas.gov/school-district-leaders/other-services/education-service-centers/education-service-centers-map">Education Service Centers map</a></dd></dl><div class="use">Use for: signing the Transfer of Physical and Electronic Records form, computer wipes with written confirmation, distributing state-funded chattel to area schools.</div></div>
+    <div class="contact other"><div class="org">Teacher Retirement System of Texas</div><div class="role">Employer reporting, final TRS payment date, service-record verification, Web Administrator authorization (form 597A)</div><dl>
+      <dt>Web</dt><dd><a href="https://www.trs.texas.gov/Pages/about_forms.aspx">TRS forms for reporting employers</a></dd>
+    </dl><div class="use">Use for: Directives I notification, account status after classes end, TRS Web Admin Authorization so the conservator can submit final reports.</div></div>
+    <div class="contact other"><div class="org">Texas Comptroller of Public Accounts</div><div class="role">Escrow of 110% of the estimated state reimbursement when a charter holder sells state-funded real property; warrant holds</div><dl>
+      <dt>Web</dt><dd><a href="https://comptroller.texas.gov/">comptroller.texas.gov</a> · <a href="https://fmx.cpa.texas.gov/fmx/travel/textravel/">TexTravel rules (conservator travel)</a></dd>
+    </dl></div>
+    <div class="contact other"><div class="org">State Office of Administrative Hearings (SOAH)</div><div class="role">Hears revocation and non-renewal appeals under TEC §12.116 and 19 TAC Ch. 157; expedited cases docketed by March 15</div><dl>
+      <dt>Web</dt><dd><a href="https://www.soah.texas.gov/">soah.texas.gov</a></dd>
+    </dl></div>
+    <div class="contact other"><div class="org">Texas Workforce Commission</div><div class="role">Mass claims process for staff unemployment filings when a charter closes</div><dl>
+      <dt>Web</dt><dd><a href="https://www.twc.texas.gov/programs/unemployment-benefits/mass-claims-unemployment-benefits">TWC mass claims</a></dd>
+    </dl></div>
+  </div>
+</section>
+
+<footer>
+  <span>Sources: Closed Charter Handbook (TEA, Sept 10, 2024); Charter Closeout Handbook (TEA, July 2021); Comprehensive Closed Charter Checklist workbook; Closed Charter Expense Report Instructions; Closed Charter Forms folder; TEA web pages retrieved September 16, 2026.</span>
+  <span>Statute titles verified against the Texas Legislature's statutes site and TEA's 19 TAC Chapter 100 and 97 listings. Phone numbers and names change; confirm with the Division before relying on a contact for a deadline.</span>
+</footer>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+/* ---------- DATA ---------- */
+const PHASES = [
+  ["Prior to placement",6],["Upon placement",41],["First month",9],["Ongoing",3],
+  ["Immediately after classes end",18],["Month after classes end",16],["After closure",20],["Unspecified",3]
+];
+const OWNERS = [
+  ["Superintendent",54],["Conservator",33],["Shared (conservator + others)",16],["TEA divisions",5],["Board of Managers",2],["Charter board",1],["Unassigned",5]
+];
+
+const DEADLINES = [
+  {days:3,  win:"3 calendar days", trigger:"Notice of revocation, surrender, or non-renewal", what:"Superintendent presents parent, staff, and TRS notifications and the staff/student contact database to the conservator for approval; distribute within 3 business days of approval.", owner:"Superintendent", group:"Directives I", src:"Handbook p. 14"},
+  {days:7,  win:"7 calendar days", trigger:"Issuance of Directives I", what:"Governing board meets and adopts the bank resolution adding the conservator as required signatory and removing all others.", owner:"Charter board", group:"Directives I", src:"Handbook p. 16; form p. 55"},
+  {days:3,  win:"3 days", trigger:"Approved bank resolution", what:"Conservator on the bank signature card, other signatories removed.", owner:"Conservator", group:"Directives I", src:"Handbook p. 16"},
+  {days:7,  win:"7 days", trigger:"Notice letter", what:"Disclose liabilities: unremitted fiduciary withholdings (or CFO affidavit that all are current), security interests on state property, vendor list with contracts, aged accounts payable with days delinquent.", owner:"Charter holder", group:"Directives I", src:"Handbook p. 18–19"},
+  {days:10, win:"10 days", trigger:"Placement letter", what:"Contract with a licensed CPA to prepare the final Annual Financial Report; the contract must state the AFR submission date.", owner:"Charter holder", group:"Directives I", src:"Handbook p. 19"},
+  {days:15, win:"15 days", trigger:"Notice", what:"Detailed capital-asset list reconciled to the last AFR: bank accounts and balances, real property with deeds and state/federal share, insurance and warranties, vehicles with VINs and titles, equipment inventory in state/federal/local lists, leases paid with state funds.", owner:"Superintendent", group:"Directives I", src:"Handbook p. 15–18"},
+  {days:30, win:"30 days (best practice)", trigger:"Notice of closure", what:"Hard copies of student records available for parent pickup to speed enrollment elsewhere.", owner:"Superintendent", group:"Records", src:"Handbook p. 15"},
+  {days:30, win:"1 month", trigger:"Last day of classes", what:"Student and staff records boxed, labeled, and copied to two flash drives, ready for local ESC pickup and signed transfer form; conservator keeps the second drive.", owner:"Superintendent", group:"Records", src:"Handbook p. 15, 22"},
+  {days:30, win:"1 month", trigger:"Last day of classes", what:"Written confirmation from the ESC or contractor that FERPA data was erased from all school computers and storage.", owner:"Superintendent", group:"Directives II", src:"Handbook p. 22"},
+  {days:30, win:"30 days", trigger:"Last day of class", what:"Cancel all leases and executory contracts, including teacher contracts.", owner:"Superintendent", group:"Directives II", src:"Handbook p. 23"},
+  {days:30, win:"30 days", trigger:"Last day of class", what:"Present vehicles (liens satisfied, inspected, registered) with titles and keys, and transfer real property as the agency requires with documentation, title, and keys.", owner:"Superintendent", group:"Property", src:"Handbook p. 23"},
+  {days:30, win:"30 business days", trigger:"Classes end", what:"All W-2s and 1099s completed and distributed; anything the superintendent cannot finish becomes the charter holder's responsibility.", owner:"Superintendent", group:"Finance", src:"Handbook p. 43"},
+  {days:60, win:"60 days", trigger:"Last day of classes", what:"Final payments to all creditors; superintendent signs an affidavit that all known creditors and all fiduciary obligations (IRS and others) are paid.", owner:"Superintendent", group:"Directives II", src:"Handbook p. 23"},
+  {days:10, win:"10 days", trigger:"Closure", what:"Electronic Student Records directory (SIS extracts plus scanned attachments, TREx naming) delivered on a flash drive to TEA or the conservator.", owner:"Superintendent", group:"Records", src:"Handbook p. 64"},
+  {days:150,win:"150 days", trigger:"Fiscal year end", what:"Final AFR (PDF with signed Certificate of Board plus finalized data feed) submitted through TEAL AUDIT. FYE Aug 31 → Jan 28; FYE Jun 30 → Nov 27. No weekend or holiday extension under TEC §44.008.", owner:"Charter holder / CPA", group:"Finance", src:"Handbook p. 20, 74; TEC §44.008"},
+  {days:90, win:"90 days", trigger:"Last day of instruction (or sale closing, if earlier)", what:"If the charter holder sells state-funded real property: place non-state funds equal to 110% of the estimated state reimbursement in escrow with the Comptroller, after filing the Affidavit of Ownership with the county clerk.", owner:"Charter holder", group:"Property", src:"Handbook p. 38; TEC §12.1283"},
+  {days:14, win:"2 weeks", trigger:"Final financial audit filed", what:"Charter holder submits the final state reimbursement from escrow plus any additional funds; the state then files a release of interest.", owner:"Charter holder", group:"Property", src:"Handbook p. 38"},
+  {days:45, win:"45 days or less (goal)", trigger:"EDGAR Connect WorkApp form submitted", what:"Federal Grants Division approval of the federal property disposition forms; no sale or transfer before approval.", owner:"Conservator / superintendent for closure", group:"Property", src:"Federal Property Disposition Process"},
+  {days:30, win:"30 days", trigger:"Official closure date", what:"All remaining records delivered to the local ESC with a signed Receipt of Records, unless TEA approves an extension in writing.", owner:"Conservator", group:"Records", src:"Conservator Records Directive (local template)"},
+  {days:5,  win:"5 business days", trigger:"Confirmed enrollment elsewhere", what:"Active student records transferred to the receiving school or ESC.", owner:"Registrar", group:"Records", src:"Conservator Records Directive (local template)"},
+  {days:10, win:"10 days", trigger:"Vendor notification letter", what:"Vendors cease services and return deposits or unexpended funds by check to the charter.", owner:"Vendors", group:"Finance", src:"Handbook p. 81"},
+  {days:5,  win:"By the 5th of each month", trigger:"Month end", what:"Conservator expense report (with mileage maps and receipts) and progress report to the Closed Charter Property Coordinator; processed by the 15th.", owner:"Conservator", group:"Reporting", src:"Expense Report Instructions; checklist item 111"},
+  {days:90, win:"Every 90 days", trigger:"Appointment", what:"Commissioner reviews whether the conservator remains necessary; TEA holds 90-day review conferences against exit criteria in the progress report.", owner:"TEA", group:"Reporting", src:"TEC §39A.003(b); progress report exemplar"},
+  {days:56, win:"8 weeks", trigger:"Appointment", what:"Needs assessment executive summary (general appointee requirement; for closures the closure plan and directives serve this role).", owner:"Conservator", group:"Reporting", src:"Monitor/Conservator job description"},
+  {days:90, win:"90 days", trigger:"Commissioner's final revocation decision", what:"Charter's window to appeal to SOAH; expedited cases docketed by March 15.", owner:"Charter holder", group:"Directives I", src:"Checklist row 3; Revocation Protocol Flowchart"},
+  {days:365,win:"1 year (goal)", trigger:"Conservator placement", what:"Closure complete: evidence uploaded, Official Closure Memo issued, conservator removed.", owner:"Conservator / TEA", group:"Reporting", src:"Handbook p. 10, 12"}
+];
+
+const FORMS = [
+  {n:1,name:"Possible First Onsite Meeting List / Agenda",use:"Conservator requests for the initial onsite: board dates, signatory resolution, 6 months of bank statements, org charts and system admin access, remaining staff list.",page:49,file:""},
+  {n:2,name:"Sample Letter to Students, Parents, Staff About the Closure",use:"Parent/staff notification (Directives I §1). The handbook's sample is a generic district letter; use the required-elements list on p. 14–15.",page:50,file:"Sample closure letter.docx"},
+  {n:3,name:"FAQ Document for Parents Including Checklist for Relocating Students",use:"Student/parent FAQ with timeline, contact information, enrollment rights at ISDs and charters, compulsory attendance, accountability resources.",page:51,file:""},
+  {n:4,name:"Student Records Checklist",use:"Twelve items every student file must contain before parent pickup or ESC transfer.",page:54,file:""},
+  {n:5,name:"Sample Resolution for Making the Conservator a Signatory",use:"Board resolution adding the conservator as agent-signatory on all accounts by EIN and account digits and removing all other signatories.",page:55,file:"Board Resolution_Signatory Agent.docx"},
+  {n:6,name:"Sample Press Release",use:"TEA-format closure announcement with campuses, records custodian phone numbers, and the Charter Authorizing contact line.",page:57,file:"Sample Press Release.docx"},
+  {n:7,name:"Exemplar Inventory Spreadsheet",use:"State and federal asset inventory with lot numbers, grant source, value, location, and transfer-of-chattel attestation.",page:58,file:""},
+  {n:8,name:"Affidavit of Ownership",use:"Filed in the county property records to disclose the State's interest in real property bought with state or federal funds (Gov't Code §553.002).",page:60,file:"Property Affidavit Sample (PDF).docx"},
+  {n:9,name:"Instructions for Creating Electronic Student Files",use:"Directory structure, TREx naming conventions, and flash-drive delivery within 10 days of closure.",page:62,file:"Instructions for creating electronic student files in advance of charter school closure.docx"},
+  {n:10,name:"Sample Student Records Request Form for Region 13",use:"FERPA-compliant request form parents and schools use after records reach ESC 13.",page:65,file:""},
+  {n:11,name:"Transfer of Physical and Electronic Records Confirmation",use:"Chain-of-custody form signed by the charter representative and the ESC representative for boxes and storage devices.",page:66,file:"TRANSFER OF PHYSICAL and ELECTRONIC RECORDS.docx"},
+  {n:12,name:"TSDS/PEIMS Deadline Graph",use:"Full 2024–25 submission timeline for all TSDS collections and PEIMS submissions.",page:67,file:""},
+  {n:13,name:"Federal Asset Disposition Process",use:"Step list and thresholds for federally purchased property; EDGAR Connect WorkApp.",page:70,file:"FEDERAL PROPERTY DISPOSITION PROCESS.pdf"},
+  {n:14,name:"Transfer of Chattel Confirmation",use:"Attestation of transfer of personal property from the closed charter to a recipient, with item descriptions.",page:72,file:"TRANSFER OF CHATTEL.docx / Transfer of Chattel Form.docx"},
+  {n:15,name:"Example Board Resolution to Accept State Property",use:"Receiving charter's board resolution accepting state-purchased materials from the closed charter.",page:73,file:"Board Resolution to Accept State Property.docx"},
+  {n:16,name:"Annual Financial Report Deadlines Table",use:"AFR due dates by fiscal year end and TEAL submission requirements.",page:74,file:""},
+  {n:17,name:"Evidence of Closure Actions Graph (Final Closure Graph)",use:"Eight closure items the conservator evidences: attendance audit, settle-up payment, student and staff records to ESC, personal and real property disposition, final AFR, remaining funds liquidated.",page:75,file:"Final Closure Graph.docx"},
+  {n:18,name:"Exemplar Evidence of Closure Actions (redacted)",use:"Filled example of the closure graph.",page:76,file:""},
+  {n:19,name:"Final Organization of Evidence of Closure Actions",use:"How to number evidence documents to match the closure graph for the final file to TEA.",page:77,file:""},
+  {n:20,name:"Example SharePoint Evidence of Closure Actions",use:"Folder structure for uploading Directives I and II evidence to the charter's SharePoint file.",page:78,file:""},
+  {n:21,name:"Secure Site Access Account Deactivation Form",use:"Deactivating the charter's TEAL/secure-site accounts after final submissions.",page:79,file:"Account deactivation Form 2023.pdf"},
+  {n:22,name:"Example CRDC Certification Record",use:"Civil Rights Data Collection certification the superintendent signs for the final year.",page:80,file:"Example CRDC Certification Record .pdf"},
+  {n:23,name:"Vendor Notification Letter",use:"Cancels contracts under Board of Managers authority (TEC §39A.004, §12.102(2), §39A.202) and demands return of deposits within 10 days.",page:81,file:"Vendor Notification Letter.docx"},
+  {n:24,name:"Conservator Progress Report Exemplar",use:"Placement information, entry conditions, exit criteria goals and goal progress measures, monthly activities, directives log, board interactions.",page:82,file:"(Progress report workbook from TEA)"},
+  {n:25,name:"Conservator Expense Report Exemplar",use:"TEA Monitor/Conservator Expense Voucher: hours worked and traveled, mileage, lodging, incidentals, signature page, agency-use block.",page:87,file:"(Monthly expense report workbook from TEA)"},
+  {n:26,name:"TRS Web Administrator Authorization Agreement",use:"Authorizes the conservator or designee as TRS web administrator for final employer reporting.",page:97,file:"TRS form_597A Web Admin Authorization.pdf"},
+  {n:27,name:"ACH Transfer Form",use:"Transfer of remaining funds to TEA after outstanding checks clear (Directives II §10).",page:98,file:""},
+  {n:28,name:"Wire Transfer Form",use:"Alternative to ACH for remitting remaining funds to TEA's charter school liquidation fund.",page:99,file:""}
+];
+
+const FOLDER = [
+  {file:"1-Revocation Protocol FlowChartV4.pdf",kind:"Process",desc:"TEA's internal revocation-to-closure flow (ratings, memo, informal review, SOAH, conservator, BOM, high-risk designation).",kb:20},
+  {file:"2 CFR 200.1 Definitions of Equipment and Supplies.docx",kind:"Reference",desc:"Federal equipment/supplies definitions, reuse preference order, over/under $5,000 disposition, TEA contact for WorkApp forms.",kb:23},
+  {file:"Account deactivation Form 2023.pdf",kind:"Template",desc:"Secure Site Access account deactivation form (handbook form 21).",kb:264},
+  {file:"Board Resolution to Accept State Property.docx",kind:"Template",desc:"Receiving school's resolution to accept state-purchased materials (form 15).",kb:19},
+  {file:"Board Resolution_Signatory Agent.docx",kind:"Template",desc:"Resolution adding the conservator as signatory and removing others (form 5).",kb:80},
+  {file:"Conservator_Records_Directive (1).docx",kind:"Template",desc:"Records-management directive template: scope, retention, ESC transfer, destruction, confidentiality.",kb:17},
+  {file:"Copy of 0 Charter Closeout Checklist SS notes.docx",kind:"Reference",desc:"Annotated checklist by phase with TEA margin notes.",kb:57},
+  {file:"Example CRDC Certification Record .pdf",kind:"Sample",desc:"Civil Rights Data Collection certification example (form 22).",kb:115},
+  {file:"FEDERAL PROPERTY DISPOSITION PROCESS.pdf",kind:"Process",desc:"Six-step federal disposition process with Q&A and summary rules.",kb:243},
+  {file:"Federal Property Disposition Forms and Links.docx",kind:"Reference",desc:"Link sheet: 2 CFR 200.1, EDGAR FAQs, General and Fiscal Guidelines.",kb:20},
+  {file:"Final Closure Graph.docx",kind:"Template",desc:"Eight-row evidence table for the final closure file (form 17).",kb:21},
+  {file:"Instructions for creating electronic student files in advance of charter school closure.docx",kind:"Process",desc:"SIS extract and TREx naming instructions (form 9).",kb:226},
+  {file:"Property Affidavit Sample (PDF).docx",kind:"Template",desc:"Affidavit of Ownership disclosing the State's interest (form 8).",kb:27},
+  {file:"Sample Press Release.docx",kind:"Sample",desc:"Closure press release template (form 6).",kb:20},
+  {file:"Sample closure letter.docx",kind:"Sample",desc:"Sample closure letter to families (form 2).",kb:165},
+  {file:"TRANSFER OF CHATTEL.docx",kind:"Template",desc:"Transfer of chattel attestation with inventory table (form 14).",kb:21},
+  {file:"TRANSFER OF PHYSICAL and ELECTRONIC RECORDS.docx",kind:"Template",desc:"Chain-of-custody form for records to the ESC (form 11).",kb:22},
+  {file:"TRS form_597A Web Admin Authorization.pdf",kind:"Template",desc:"TRS Web Administrator Authorization Agreement (form 26).",kb:112},
+  {file:"TSA response to threat of litigation.docx",kind:"Sample",desc:"Sample response when a vendor or party threatens litigation during wind-up.",kb:20},
+  {file:"Transfer of Chattel Form.docx",kind:"Template",desc:"Short-form transfer of chattel confirmation.",kb:20},
+  {file:"Vendor Notification Letter.docx",kind:"Template",desc:"Contract cancellation and deposit-return letter (form 23).",kb:22},
+  {file:"cs-govcs-isd-external-audit-firms.csv",kind:"Reference",desc:"TEA list of external CPA firms auditing charters and ISDs by ESC region (159 firms); use to hire the final-AFR auditor.",kb:9},
+  {file:"edgar-faqv7.pdf",kind:"Reference",desc:"TEA EDGAR FAQ version 7: formal guidance on federal grant administration and disposition.",kb:993},
+  {file:"general-and-fiscal-guidelines-7.1.2021-and-after.pdf",kind:"Reference",desc:"TEA General and Fiscal Guidelines for grants on or after July 1, 2021.",kb:547}
+];
+
+const ED = "https://statutes.capitol.texas.gov/Docs/ED/htm/ED.";
+const TAC100 = "https://txrules.elaws.us/rule/title19_chapter100_sec.";
+const LAW = [
+  {cite:"TEC §12.105",title:"Status",role:"A charter school is part of the public school system; cited in the vendor letter.",group:"TEC Ch. 12",by:"Vendor Notification Letter",url:ED+"12.htm#12.105"},
+  {cite:"TEC §12.106",title:"State Funding",role:"Subsections (h) and (i): remaining state funds are remitted to TEA or transferred to another charter holder at closure.",group:"TEC Ch. 12",by:"TEC §12.1284",url:ED+"12.htm#12.106"},
+  {cite:"TEC §12.107",title:"Status and Use of Funds",role:"State funds are public funds held in trust; the fiduciary basis for remitting excess funds to the State.",group:"TEC Ch. 12",by:"Directives II §1",url:ED+"12.htm#12.107"},
+  {cite:"TEC §12.1141",title:"Renewal of Charter",role:"Mandatory non-renewal grounds: lowest academic or financial rating for three of the five preceding years, or a campus at the lowest rating three years running.",group:"TEC Ch. 12",by:"Handbook p. 9",url:ED+"12.htm#12.1141"},
+  {cite:"TEC §12.115",title:"Basis for Charter Revocation or Modification of Governance",role:"Revocation grounds (material violation, insolvency, accounting failures, health and safety, law, performance framework); §12.115(c) is the 'three strikes' mandatory revocation.",group:"TEC Ch. 12",by:"Handbook p. 6, 8; flowchart",url:ED+"12.htm#12.115"},
+  {cite:"TEC §12.116",title:"Procedure for Revocation, Modification of Governance, or Denial of Renewal",role:"Informal review by the Commissioner, then SOAH review under an arbitrary-and-capricious standard.",group:"TEC Ch. 12",by:"Flowchart; checklist rows 2–3",url:ED+"12.htm#12.116"},
+  {cite:"TEC §12.1161",title:"Effect of Revocation, Denial of Renewal, or Surrender of Charter",role:"Charter holder ceases operation as a public school on the effective date.",group:"TEC Ch. 12",by:"Surrender process (handbook p. 11–12)",url:ED+"12.htm#12.1161"},
+  {cite:"TEC §12.1162",title:"Additional Sanctions",role:"Authorizes the conservator, management team, or board of managers for a charter, and orders to close campuses.",group:"TEC Ch. 12",by:"TEA Monitors and Conservators page",url:ED+"12.htm#12.1162"},
+  {cite:"TEC §12.1163",title:"Audit by Commissioner",role:"Commissioner may audit records of the charter holder, the school, and any management company; final closeout audit authority.",group:"TEC Ch. 12",by:"19 TAC §100.1075, §100.1077",url:ED+"12.htm#12.1163"},
+  {cite:"TEC §12.1164",title:"Notice to Teacher Retirement System of Texas",role:"TEA notifies TRS of revocation, non-renewal, or surrender; the basis for the TRS notification steps.",group:"TEC Ch. 12",by:"Flowchart; checklist item 61",url:ED+"12.htm#12.1164"},
+  {cite:"TEC §12.122",title:"Liability of Members of Governing Body of Open-Enrollment Charter School",role:"Board members are liable as school district trustees; cited for the fiduciary duty to remit excess funds.",group:"TEC Ch. 12",by:"Directives II §1",url:ED+"12.htm#12.122"},
+  {cite:"TEC §12.128",title:"Property Purchased or Leased with State Funds",role:"State-funded property is public property held in trust; no transfer, sale, or disposition without agency consent after revocation or closure; Commissioner may take possession and direct disposition.",group:"TEC Ch. 12",by:"Directives II §1; handbook p. 38",url:ED+"12.htm#12.128"},
+  {cite:"TEC §12.1281",title:"Disposition of Property Purchased with State Funds",role:"The agency directs the former charter holder to retain and reimburse, transfer, or close under §§12.1282–12.1284.",group:"TEC Ch. 12",by:"Checklist rows on real property",url:ED+"12.htm#12.1281"},
+  {cite:"TEC §12.1282",title:"Transfer of Property Purchased with State Funds",role:"Transfer of state-funded property to another charter holder, ISD, or the agency.",group:"TEC Ch. 12",by:"Transfer of chattel; board resolution to accept state property",url:ED+"12.htm#12.1282"},
+  {cite:"TEC §12.1283",title:"Sale of Property Purchased with State Funds",role:"Charter holder may sell and retain the property after reimbursing the State's share: affidavit of ownership, 110% escrow with the Comptroller, reimbursement within two weeks of the final audit, release of interest.",group:"TEC Ch. 12",by:"Handbook p. 38; checklist row 65",url:ED+"12.htm#12.1283"},
+  {cite:"TEC §12.1284",title:"Closure of Charter School Operations",role:"After paying all obligations, remit remaining funds and state reimbursement amounts to the agency for the charter school liquidation fund, or transfer them to another charter holder.",group:"TEC Ch. 12",by:"Directives II §1, §10; ACH/wire forms",url:ED+"12.htm#12.1284"},
+  {cite:"TEC §12.102(2)",title:"Authority Under Charter",role:"Governing body holds overall financial management; the vendor letter uses it to show the BOM inherits that authority.",group:"TEC Ch. 12",by:"Vendor Notification Letter",url:ED+"12.htm#12.102"},
+  {cite:"TEC §39A.001",title:"Grounds for Commissioner Action",role:"Accreditation, accountability, financial, and investigation grounds for intervention; §39A.001(2) cited in progress reports.",group:"TEC Ch. 39A",by:"TEA Monitors and Conservators page; progress report exemplar",url:ED+"39A.htm#39A.001"},
+  {cite:"TEC §39A.002",title:"Authorized Commissioner Actions",role:"Authorizes appointment of a monitor, conservator, management team, or board of managers; §39A.002(7) cited in progress reports.",group:"TEC Ch. 39A",by:"TEA Monitors and Conservators page",url:ED+"39A.htm#39A.002"},
+  {cite:"TEC §39A.003",title:"Powers and Duties of Conservator or Management Team",role:"Commissioner defines powers; 90-day necessity review; conservator may direct or approve actions of the superintendent, principals, and board but cannot set tax rates, adopt a different budget, or alter elections.",group:"TEC Ch. 39A",by:"TEA Monitors and Conservators page",url:ED+"39A.htm#39A.003"},
+  {cite:"TEC §39A.004",title:"Appointment of Board of Managers",role:"BOM exercises all powers and duties of a board of trustees; the authority the vendor letter relies on.",group:"TEC Ch. 39A",by:"Vendor Notification Letter; BOM page",url:ED+"39A.htm#39A.004"},
+  {cite:"TEC §39A.006",title:"Board of Managers for School District Managed by Conservator or Management Team",role:"Path from conservator to a board of managers when directives are not met.",group:"TEC Ch. 39A",by:"BOM page; Directives I note",url:ED+"39A.htm#39A.006"},
+  {cite:"TEC §39A.202",title:"Board of Managers (powers of elected board suspended)",role:"Cited in the vendor letter for suspension of the former board's powers once a BOM is appointed.",group:"TEC Ch. 39A",by:"Vendor Notification Letter",url:ED+"39A.htm#39A.202"},
+  {cite:"TEC §39A.251",title:"Applicability of Interventions and Sanctions to Open-Enrollment Charter School",role:"Chapter 39A interventions, including conservators, apply to charters; cited with §39A.903 for who pays the conservator.",group:"TEC Ch. 39A",by:"Job description (compensation)",url:ED+"39A.htm#39A.251"},
+  {cite:"TEC §39A.256",title:"Appointment of Board of Managers for Open-Enrollment Charter School",role:"BOM appointment for a charter, including after revocation to complete closure.",group:"TEC Ch. 39A",by:"BOM page; closure page",url:ED+"39A.htm#39A.256"},
+  {cite:"TEC §39A.257",title:"Superintendent for Open-Enrollment Charter School",role:"Commissioner may appoint a superintendent for closure alongside the BOM (the 'Superintendent for Closure' in the checklist).",group:"TEC Ch. 39A",by:"Checklist rows 65–66",url:ED+"39A.htm#39A.257"},
+  {cite:"TEC §39A.259",title:"Compensation of Board of Managers and Superintendent",role:"Compensation source for charter BOM members and the appointed superintendent.",group:"TEC Ch. 39A",by:"Chapter 39A Subchapter F",url:ED+"39A.htm#39A.259"},
+  {cite:"TEC §39A.260",title:"Immunity; Representation by Attorney General",role:"Immunity and AG representation for charter BOM members and superintendents; §39A.904 covers other appointees.",group:"TEC Ch. 39A",by:"Chapter 39A Subchapter F",url:ED+"39A.htm#39A.260"},
+  {cite:"TEC §39A.903",title:"Costs Paid by School District",role:"The school system pays the conservator's costs; if not, the Commissioner withholds from state funds or recovers as an overallocation under §48.272. Basis for the $250/hour rate being district-paid until the final FSP payment.",group:"TEC Ch. 39A",by:"Job description; expense instructions",url:ED+"39A.htm#39A.903"},
+  {cite:"TEC §39A.904",title:"Immunity from Civil Liability",role:"Civil immunity for monitors, conservators, and management team members acting in good faith.",group:"TEC Ch. 39A",by:"Chapter 39A Subchapter Z",url:ED+"39A.htm#39A.904"},
+  {cite:"TEC §11.1511(b)(8)",title:"Specific Powers and Duties of Board (tax rate)",role:"Districts adopt a tax rate; charters do not. Handbook comparison of charters and districts.",group:"TEC other",by:"Handbook p. 6",url:ED+"11.htm#11.1511"},
+  {cite:"TEC §25.085",title:"Compulsory School Attendance",role:"Parent FAQ: students six and older must attend until 18 even while transferring.",group:"TEC other",by:"Parent FAQ (handbook p. 52)",url:ED+"25.htm#25.085"},
+  {cite:"TEC §39.052",title:"Accreditation Status",role:"Academic and financial standards behind accreditation statuses referenced in the parent FAQ.",group:"TEC other",by:"Parent FAQ (handbook p. 53)",url:ED+"39.htm#39.052"},
+  {cite:"TEC §44.008",title:"Annual Audit; Report",role:"AFR due within 150 days of fiscal year end; no extension for weekends or holidays.",group:"TEC other",by:"Handbook p. 20, 74",url:ED+"44.htm#44.008"},
+  {cite:"TEC §48.272",title:"Recovery of Overallocated Funds",role:"Recovery mechanism if a district fails to pay intervention costs.",group:"TEC other",by:"TEC §39A.903",url:ED+"48.htm#48.272"},
+  {cite:"19 TAC §97.1073",title:"Appointment of Monitor, Conservator, or Board of Managers",role:"Commissioner rule on appointment, duties, and removal of appointees.",group:"19 TAC",by:"TEA Monitors and Conservators page; BOM page",url:"https://tea.texas.gov/laws-and-rules/commissioner-rules-tac/coe-tac-currently-effect/ch097ee.pdf"},
+  {cite:"19 TAC §100.1037",title:"Renewal of an Open-Enrollment Charter",role:"Renewal and non-renewal procedure.",group:"19 TAC",by:"Handbook p. 9",url:TAC100+"100.1037"},
+  {cite:"19 TAC §100.1049",title:"Revocation and Modification of Governance of an Open-Enrollment Charter",role:"Rule procedure for revocation and governance changes.",group:"19 TAC",by:"Handbook p. 8",url:TAC100+"100.1049"},
+  {cite:"19 TAC §100.1051",title:"Standards to Revoke and Modify the Governance of an Open-Enrollment Charter",role:"Standards the Commissioner applies when revoking.",group:"19 TAC",by:"Handbook p. 8",url:TAC100+"100.1051"},
+  {cite:"19 TAC §100.1053",title:"Management of Charter Campus(es) Following Revocation, Surrender, or Expiration",role:"Governance of campuses through the wind-up period.",group:"19 TAC",by:"Handbook p. 11–12",url:TAC100+"100.1053"},
+  {cite:"19 TAC §100.1063",title:"Status and Use of State Funds; Depository Contract",role:"State funds held in a depository under contract; basis for signatory and account control.",group:"19 TAC",by:"Directives I §3(b)",url:TAC100+"100.1063"},
+  {cite:"19 TAC §100.1067",title:"Accounting for State and Federal Funds",role:"Accounting and safeguarding requirements; the handbook cites §100.1067(c) for keeping property insurance in force after closure.",group:"19 TAC",by:"Checklist items 47, 94",url:TAC100+"100.1067"},
+  {cite:"19 TAC §100.1075",title:"Audit by Commissioner; Records in the Possession of a Management Company",role:"Audit access to charter and management-company records.",group:"19 TAC",by:"TEC §12.1163",url:TAC100+"100.1075"},
+  {cite:"19 TAC §100.1077",title:"Final Audit Upon Revocation, Surrender, or Closure of an Open-Enrollment Charter",role:"The final closeout audit requirement behind Directives I §7 and II §2.",group:"19 TAC",by:"TEA Monitors and Conservators page",url:TAC100+"100.1077"},
+  {cite:"19 TAC §100.1091",title:"Use of Public Property by a Charter Holder",role:"State-funded property may be used only for charter purposes.",group:"19 TAC",by:"TEC §12.128",url:TAC100+"100.1091"},
+  {cite:"19 TAC §100.1095",title:"Possession and Control of the Public Property of a Former Charter Holder",role:"Agency possession and control of property after closure; conservator/BOM oversight until disposition.",group:"19 TAC",by:"Checklist items 97–100",url:TAC100+"100.1095"},
+  {cite:"19 TAC §100.1099",title:"Real Property Held in Trust",role:"Real property bought with state funds is held in trust; affidavit and reimbursement framework.",group:"19 TAC",by:"Affidavit of Ownership",url:TAC100+"100.1099"},
+  {cite:"19 TAC §100.1203",title:"Records Management",role:"Subsection (b): records of a closed charter go to a commissioner-designated custodian (ESC 13) accessible to students, parents, and former employees.",group:"19 TAC",by:"Electronic student files instructions",url:TAC100+"100.1203"},
+  {cite:"19 TAC §100.1213",title:"Failure to Operate",role:"Consequences when a charter stops operating without authorization.",group:"19 TAC",by:"19 TAC Ch. 100 listing",url:TAC100+"100.1213"},
+  {cite:"19 TAC Ch. 157",title:"Hearings and Appeals (informal and formal procedures)",role:"Procedures for informal review and SOAH hearings on revocation.",group:"19 TAC",by:"Revocation Protocol Flowchart",url:"https://tea.texas.gov/laws-and-rules/texas-administrative-code/19-tac-chapter-157"},
+  {cite:"13 TAC §7.125(a)(6)",title:"Local Schedule SD (school district records retention)",role:"Permanent retention of student academic records, access records, scholastic census, accreditation reports.",group:"Other Texas",by:"Electronic student files instructions",url:"https://www.tsl.texas.gov/slrm/recordspubs/sd.html"},
+  {cite:"Tex. Const. art. III §52(a)",title:"Restrictions on Lending Credit or Making Grants of Public Money",role:"Constitutional basis for the fiduciary duty to return excess public funds.",group:"Other Texas",by:"Directives II §1",url:"https://statutes.capitol.texas.gov/Docs/CN/htm/CN.3.htm#3.52"},
+  {cite:"Tex. Att'y Gen. Op. GA-0252 (2004)",title:"Attorney General Opinion on charter school assets",role:"Charter holder's duty regarding state-funded assets at closure.",group:"Other Texas",by:"Directives II §1",url:"https://www.texasattorneygeneral.gov/opinions/opinions/50abbott/op/2004/htm/ga0252.htm"},
+  {cite:"Gov't Code §553.002",title:"Affidavit of Interest in Property",role:"Required contents of the Affidavit of Ownership filed with the county clerk.",group:"Other Texas",by:"Affidavit of Ownership form",url:"https://statutes.capitol.texas.gov/Docs/GV/htm/GV.553.htm#553.002"},
+  {cite:"Gov't Code Ch. 551",title:"Texas Open Meetings Act",role:"Board meetings adopting closure resolutions must be lawfully called and noticed.",group:"Other Texas",by:"Signatory resolution form",url:"https://statutes.capitol.texas.gov/Docs/GV/htm/GV.551.htm"},
+  {cite:"Gov't Code Ch. 441",title:"State Library and Archives; local government records",role:"Records retention authority for board minutes and financial records.",group:"Other Texas",by:"Conservator Records Directive",url:"https://statutes.capitol.texas.gov/Docs/GV/htm/GV.441.htm"},
+  {cite:"Texas Business Organizations Code",title:"Winding up and termination of a nonprofit corporation",role:"Dissolution of the charter holder's nonprofit corporation and disposition of its records.",group:"Other Texas",by:"Checklist items 88–90",url:"https://statutes.capitol.texas.gov/Docs/BO/htm/BO.11.htm"},
+  {cite:"Texas Payday Law (Labor Code Ch. 61)",title:"Payment of Wages",role:"Final paychecks and payroll record retention.",group:"Other Texas",by:"Conservator Records Directive",url:"https://statutes.capitol.texas.gov/Docs/LA/htm/LA.61.htm"},
+  {cite:"2 CFR §200.1",title:"Definitions (equipment, supplies, computing devices)",role:"Classification that drives the federal disposition path and the $5,000 threshold.",group:"Federal",by:"Federal disposition process",url:"https://www.ecfr.gov/current/title-2/section-200.1"},
+  {cite:"2 CFR §200.313",title:"Equipment",role:"Use, management, and disposition of federally funded equipment; refund of federal share over $5,000.",group:"Federal",by:"Checklist item 99",url:"https://www.ecfr.gov/current/title-2/section-200.313"},
+  {cite:"2 CFR §200.314",title:"Supplies",role:"Residual unused supplies over $5,000 aggregate: retain for other federal awards or sell and compensate USDE.",group:"Federal",by:"Checklist item 99",url:"https://www.ecfr.gov/current/title-2/section-200.314"},
+  {cite:"2 CFR §200.334",title:"Retention Requirements for Records",role:"Federal grant record retention after closeout (the local directive cites the pre-2020 number §200.333).",group:"Federal",by:"Conservator Records Directive",url:"https://www.ecfr.gov/current/title-2/section-200.334"},
+  {cite:"34 CFR §80.41",title:"Financial Reporting (Form 269/269a)",role:"Final federal financial status reports if the school received funds directly from USDE.",group:"Federal",by:"Checklist item 90",url:"https://www.ecfr.gov/current/title-34/part-80"},
+  {cite:"34 CFR §300.624",title:"Destruction of Information (IDEA)",role:"Special education records: notify parents before destruction; retention practice of 7 years or age 27.",group:"Federal",by:"Conservator Records Directive",url:"https://www.ecfr.gov/current/title-34/section-300.624"},
+  {cite:"20 U.S.C. §1232g (FERPA)",title:"Family Educational Rights and Privacy Act",role:"Governs release of student records, device wipes, and the records-request forms.",group:"Federal",by:"Directives II §5; ESC 13 forms",url:"https://www.ecfr.gov/current/title-34/part-99"},
+  {cite:"8 CFR §274a.2",title:"Form I-9 retention",role:"Three years after hire or one year after separation, whichever is later.",group:"Federal",by:"Conservator Records Directive",url:"https://www.ecfr.gov/current/title-8/section-274a.2"},
+  {cite:"26 U.S.C. §6001",title:"Records (Internal Revenue Code)",role:"Payroll and tax record retention; W-2/1099 obligations; 501(c)(3) dissolution filings (Form 990).",group:"Federal",by:"Checklist items 85, 88",url:"https://www.law.cornell.edu/uscode/text/26/6001"},
+  {cite:"COBRA (29 U.S.C. §1161 et seq.)",title:"Continuation of health coverage",role:"Benefit termination notices when all employees separate.",group:"Federal",by:"Checklist item 51",url:"https://www.dol.gov/general/topic/health-plans/cobra"}
+];
+
+const CHECKLIST = [{"n": 1, "action": "Notify TEA agency leadership of impending charter closure", "topic": "Unspecified", "timeline": "Prior to Conservator Placement", "phase": "Prior to placement", "assigned": "Division of Authorizing and Administration", "owner": "TEA divisions", "notes": ""}, {"n": 2, "action": "Send the charter superintendent and board president (aka “charter board”) a notice of intent to revoke (and option for commissioner appeal).", "topic": "Communication", "timeline": "Prior to Conservator Placement", "phase": "Prior to placement", "assigned": "Division of Authorizing and Administration", "owner": "TEA divisions", "notes": "Charter has opportunity for an informal review by the date specified by the Commissioner"}, {"n": 3, "action": "Send the charter board a notice of the commissioner’s final revocation decision and option for State Office of Administrative Hearings. (SOAH)", "topic": "Communication", "timeline": "Prior to Conservator Placement", "phase": "Prior to placement", "assigned": "Division of Authorizing and Administration", "owner": "TEA divisions", "notes": "Charter has option to appeal to SOAH - time frame 90 days"}, {"n": 4, "action": "Appoint the Conservator and direct the charter to continue instruction until the charter closes.", "topic": "Clerical/Appointment", "timeline": "Prior to Conservator Placement", "phase": "Prior to placement", "assigned": "Governance Interventions", "owner": "TEA divisions", "notes": ""}, {"n": 5, "action": "Consistently include the conservator in all TEA communications relevant to the charter. Authorizing staff will attend conservator calls to ensure that all TEA stakeholders are on the same page", "topic": "Communication", "timeline": "Prior to Conservator Placement/Ongoing", "phase": "Prior to placement", "assigned": "Governance Interventions", "owner": "TEA divisions", "notes": ""}, {"n": 6, "action": "Attend a strategy meeting to develop plan and schedule for closure. Review the AFR for the closing charter school", "topic": "Communication", "timeline": "Prior to Conservator Placement", "phase": "Prior to placement", "assigned": "Division of Governance Interventions/Conservator", "owner": "Conservator", "notes": ""}, {"n": 7, "action": "Locate Charter School File in SharePoint where all closure documents and evidence will be uploaded and organized for final submission to TEA after closure actions are finalized.", "topic": "Clerical", "timeline": "Upon Conservator Placement (Days 1-5)", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": "Closure graph attached"}, {"n": 8, "action": "Attend an initial virtual Placement Conference to get acquainted with the closing charter administration", "topic": "Communication", "timeline": "Upon Conservator Placement (Days 1-5)", "phase": "Upon placement", "assigned": "Conservator/TEA/ Superintendent", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 9, "action": "Schedule and attend an in person meeting with closing charter team and share closure schedule and Deliver Directives I and/or Directives II to the superintendent. You can issue the directives at the same time or over time.", "topic": "Communication", "timeline": "Upon Conservator Placement (Days 1-5)", "phase": "Upon placement", "assigned": "Conservator/Superintendent", "owner": "Shared (conservator + others)", "notes": "Agenda form attached"}, {"n": 10, "action": "Conservator Directives 1", "topic": "Communication", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 11, "action": "Conservator Directives 2", "topic": "Communication", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 12, "action": "Confirm location for transition-related tasks (central office, campus, other, etc.).", "topic": "Communication", "timeline": "Upon Conservator Placement (Days 1-5)", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 13, "action": "Ensure financial records are organized, updated, and stored in a secure location and provide the location of financial documents to TEA.", "topic": "Financial", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 14, "action": "Inform the superintendent that expenditures are not made without conservator approval", "topic": "Communication", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": "Any unallowable checks written without the conservator’s signature can be disputed with the bank."}, {"n": 15, "action": "Provide written consent before the charter school makes or approves any agreement, contract, purchase, payment, or financial transaction, and procurements made in the instruction materials ordering system.", "topic": "Communication", "timeline": "Upon Placement /Ongoing", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 16, "action": "Notify charter leadership that any unauthorized payments will be recovered through the employee’s paycheck and will result in referrals to SBEC", "topic": "Communication", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 17, "action": "Call a board meeting where the superintendent delivers a closure-related presentation, addressing: (1). Revocation notification (2). Possible request for State Office of Administrative Hearings (SOAH) review (3). Board will pass a resolution giving the conservator(s) authority to access all financial records and accounts (4). Pass a resolution adding conservator(s) as signatory on all acccounts and removing other signatories.-see template (5). Submit copy of Board Agenda to TEA*", "topic": "Communication/Financial", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent/Conservator", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 18, "action": "Give Conservator access to all financial accounts with a username and password to view the accounts.", "topic": "Financial", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent/Charter Board", "owner": "Superintendent", "notes": ""}, {"n": 19, "action": "Obtain access to all financial accounts with usernames and passwords.", "topic": "Financial", "timeline": "Upon Conservator placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 20, "action": "Determine status of Real Property (1). Will the charter holder be retaining the real property and selling it? (2). Is the property leased? If property is transferred to the agency: (1). The appointed Board of Managers shall pass a resolution giving authority to the conservator/superintendent for closure to act on behalf of the agency to oversee the sale of the property. (2). The Superintendent for Closure/conservator shall file an Affidavit of Ownership at the county clerk's office in the county where the property is located. (3). The Superintendent for Closure/conservator will work with the Closed Charter Property Coordinator to sell the property.", "topic": "Real Property", "timeline": "Upon Conservator Placement/After Classes End/After Closure", "phase": "Upon placement", "assigned": "Conservator/TEA", "owner": "Shared (conservator + others)", "notes": "See Section: After Closure"}, {"n": 21, "action": "Ensure there is a plan in place for securing the real property", "topic": "Real Property", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 22, "action": "In a letter, notify students, parents, teachers, and staff of TEA's intent to revoke the charter.", "topic": "Communication", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent/Conservator", "owner": "Shared (conservator + others)", "notes": "Sample letter attached"}, {"n": 23, "action": "Create a student/parent FAQ document: Include: Timeline for closure; contact information and a checklist for those transferring to other schools.", "topic": "Communication", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator/Superintendent", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 24, "action": "Discontinue any existing ACH (automatic) payments that should no longer be made.", "topic": "Financial", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 25, "action": "Cancel all credit and debit cards associated with the charter school", "topic": "Financial", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 26, "action": "Establish a team that will facilitate the transition of students and staff records and the completion of closure-related tasks (e.g., conservator, superintendent, CFO).", "topic": "Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator/ Superintendent", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 27, "action": "Provide TEA with name(s) and contact information of the individual(s) who will remain a contact for the former charter school throughout the transition period", "topic": "Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 28, "action": "Ensure student records are organized, updated, and stored in a secure location.", "topic": "Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 29, "action": "Create parent and faculty contact lists", "topic": "Communication/Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": "Forms attached"}, {"n": 30, "action": "Submit to the TEA Student Attendance Department answers to the following : 1. What student attendance program does the school use?(Skyward, Ascender etc) 2. How did teachers take attendance at the official attendance time? (manually to be entered into the system, or directly into the system?) When is the closing charter’s last day of school?", "topic": "Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 31, "action": "Update student records and make hard copies for parents to pick up.", "topic": "Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 32, "action": "Create talking points and a press release regarding school closure and the next steps for stakeholders.", "topic": "Communication/Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": "Sample Press Release"}, {"n": 33, "action": "Create a student/parent FAQ document: Include: Timeline for closure; contact information and a checklist for those transferring to other schools.", "topic": "Communication/Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 34, "action": "Post notice of revocation/ closure on the school’s website/homepage/all locations where board meeting notices are posted.", "topic": "Communication/Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 35, "action": "Publish the notice of SOAH determination if applicable and provide notice to the conservator on the homepage of school website all locations where notices of Board meetings are posted and in a letter to parents and staff", "topic": "Communication/Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 36, "action": "Develop a plan for securing real property", "topic": "Unspecified", "timeline": "", "phase": "Unspecified", "assigned": "Unassigned", "owner": "Unassigned", "notes": ""}, {"n": 37, "action": "Call a board meeting where the superintendent delivers a closure-related presentation, addressing: (1). Revocation notification (2). Possible request for State Office of Administrative Hearings (SOAH) review (3). Board will pass a resolution giving the conservator(s) authority to access all financial records and accounts (4). Pass a resolution adding conservator(s) as signatory on all acccounts and removing other signatories.-see template (5). Submit copy of Board Agenda to TEA*", "topic": "Communication/Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 38, "action": "Hire a certified public accountant to perform the final closeout audit", "topic": "Financial/Clerical", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": "TEA Link to Auditors"}, {"n": 39, "action": "Establish a team that will make a list of inventory purchased with state, federal, and local funds.", "topic": "Clerical/Property", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 40, "action": "Develop a plan for inventory disposition.", "topic": "Property", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent/Conservator", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 41, "action": "Formulate a list of creditors and debtors and any amounts accrued and unpaid with respect to such creditor or debtor, and make it available to the conservator and TEA. The list should include contractors to whom the school owes payment; lenders; mortgage holders and liens on the property; bondholders; equipment suppliers; secured and unsecured creditors; persons or organizations who owe the school fees or credits; lessees or sub-lessees of the school; any person or organization holding property of the school, and pending litigation.", "topic": "Financial", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 42, "action": "Provide the conservator with a list of financial accounts. and key financial documents, including the following: • General ledger, approved budget, and cash flow statement for the school year 2022-23. • *List of all bank or other financial accounts that contain local, state, and/or federal funds, including the name of and contact information for the financial institution, account number, and names of all signatories on the • account. For each account, identify the amount of local, state, and federal ownership interest. • Full account statement listing all transactions from installation of the conservator to the present for each financial account.", "topic": "Financial", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 43, "action": "Provide the conservator with a list identifying any personal property, or equipment currently being leased to or by the charter ; all agreements, contracts, and shared service arrangements, including exhibits, amendments, and other supporting documentation, for transactions for the purchase of property, equipment, software, services, etc.", "topic": "Property", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 44, "action": "Provide the conservator with a list of real property that was purchased with state funds, or for which the charter school or charter holder is listed as an owner or part owner of the property. Include *legal description *addresses, including city and county *copies of deeds, *deeds of trust *mortgage payments for each property. *documentation for the purchase of the property including contracts, agreements, and exhibits.", "topic": "Clerical/Property", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 45, "action": "Provide a List identifying any LEASED real property, personal property, or equipment. Real property must be identified by: *legal description *street address *city *county", "topic": "Clerical/Property", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 46, "action": "Provide copies of property and vehicle insurance policies and warranties", "topic": "Clerical/Property", "timeline": "Upon Conservator Placement", "phase": "Upon placement", "assigned": "Conservator/Superintendent", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 47, "action": "Ensure that an insurance policy is in place (in accordance with TAC 100.1067(c)(i)(7)) and remains in place after closure to protect assets. (After closure, the policy will remain under the charter school’s name but will be controlled by the Conservator/BOM).", "topic": "Financial/Property", "timeline": "Upon Conservator Placement/After closure", "phase": "Upon placement", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 48, "action": "Terminate any teaching contracts that would extend through summer.Terminate summer programs;Provide for the fulfillment of Student Success Initiative requirements with a local open-enrollment charter school or independent school district.", "topic": "Clerical", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 49, "action": "Call a board meeting, where the superintendent delivers closure- a related presentation; the board makes requisite closure-related decisions, including: * cancellation of any planned summer programs; * notice of termination of employment and/or contracts; * last day of employment; * date final paycheck will be distributed (as required in contract); * deadline to obtain service records from school and/or ESC (after records have been transferred to ESC); *termination dates of all benefit programs; * COBRA information; * information related to TRS and/or licensure. * additional transition information. Provide TEA with a copy of the Board meeting agenda.", "topic": "Clerical/Communication", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 50, "action": "Notify benefit providers (e.g. TRS) of impending closure and provide TEA with copies of notifications along with the date, time, and method for distribution", "topic": "Clerical/Benefits", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": "Specific rules and regulations may apply to such programs, especially teachers' retirement plans. The charter’s legal counsel should be consulted regarding HR issues."}, {"n": 51, "action": "Terminate all programs as of the last date of service in accordance with applicable law and regulations (i.e., COBRA), including health care/ health insurance; life insurance; dental plans: eyeglass plans; cafeteria plans; 401 (k) retirement plans: and pension plans.", "topic": "Clerical/Benefits", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 52, "action": "If applicable, contact TWC regarding \"mass claims\" process.", "topic": "Clerical", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 53, "action": "Follow-up communication with teachers/staff/admin regarding the closure *Notice of termination of employment and/or contracts; *Termination dates of all benefit programs; *Last day of employment; *Date of final paycheck; *Deadline to obtain service records from school and/or ESC (after records have been transferred to ESC *Information related to TRS and insurance *Information regarding employment at other schools.", "topic": "Clerical/Communication", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 54, "action": "Follow up with parents regarding the closure. Include the following information: *Date of last day of instruction; *How to obtain student records; *Summer re-testing information; *Process for eligible students to receive extended school year service As a resource, Charter Administration will have letters from the director for every student and will provide a list of other schools in the area that students might attend after the charter closes.", "topic": "Clerical/Communication", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": "Forms and instructions attached https://txschools.gov/?view=schools&lng=en"}, {"n": 55, "action": "Team completes and provides to the conservator an inventory of capital assets (vehicles), inventory for the central office and each campus including chattel (all equipment, computer equipment, office equipment, and furniture) organized by items purchased with *Federal Funds *State Funds *Local Funds Include a description of the item, any inventory-identifying numbers, date of acquisition, cost, and the items current location. (see inventory exemplar in Forms section, Form # ). Inventory/Identify all property purchased with Public Charter School Program (CSP) funds for each campus", "topic": "Property", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": "Capital Assets : Vehicles - refer to Directives I list"}, {"n": 56, "action": "Prepare and provide a list of textbooks and instructional materials.", "topic": "Clerical", "timeline": "First Month of Placement", "phase": "First month", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 57, "action": "Organize inventory into lots, oversee inventory distribution to other charter schools in the area, and donate any unwanted inventory to a 501(c)(3) according to applicable federal guidelines. Create Master Federal Inventory List and contact Federal Compliance Department at TEA to gain access to the EDGAR WorkApp for federally funded inventory submission", "topic": "Property/Inventory", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Charter", "owner": "Charter board", "notes": "Directly from Inventory List at beginning of the process Dir I"}, {"n": 58, "action": "Organize textbooks. Stack textbooks in the hallway outside of classrooms, alternating the textbooks every five books. Place the title and count on top of the stack. (Item 33)", "topic": "Property", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 59, "action": "Secure the property if it is not ready to be immediately transferred or sold. (Have a plan for locking up, who has access,", "topic": "Property", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Conservator", "owner": "Conservator", "notes": "This is situational."}, {"n": 60, "action": "* Assemble all Teacher Retirement System (TRS) forms and supporting documentation.", "topic": "Clerical/TRS", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": "In the beginning (Dir I) Conservator ensures has a list of the systems used, contact information for those who will process the information."}, {"n": 61, "action": "Notify TRS of closure. (Item 34)", "topic": "Clerical/TRS", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 62, "action": "Request account status from TRS and confirm the following activities: (1) date of the final TRS payment; and (2) verification of current service records.", "topic": "Clerical/TRS", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 63, "action": "Provide TEA with a copy of the TRS account status.", "topic": "Clerical/TRS", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "superintendent", "owner": "Superintendent", "notes": ""}, {"n": 64, "action": "Coordinate the status of property purchased with state and non-state funds, following TEA guidelines and coordinate disposition of state property, including following federal guidelines for the disposition of property purchased with CSP funds:", "topic": "Property", "timeline": "Immediately After Classes End/After Closure", "phase": "Immediately after classes end", "assigned": "Superintendent/Conservator", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 65, "action": "If the charter holder is going to sell the property: (1). It must file an Affidavit of Ownership with the County Clerks office in the county where the property is located, disclosing the state's interest in the property. (2). Place in escrow with the state comptroller an amount of non-state funds equal to 110 percent of the estimated state reimbursement amount not later than the closing date of the sale of the property, or 90 days after the last day of instruction. (3). Not later than 2 weeks after the charter holder's final financial audit is filed, the charter holder will submit the final reimbursement amount using the funds in escrow in addition to other funds necessary to pay the full amount of state reimbursement. (4). The charter holder may retain any funds remaining after state reimbursement. (5). When the state interest has been reimbursed the state will file a notice of a release of interest in the property.", "topic": "Real Property", "timeline": "Immediately After Classes End/After Closure", "phase": "Immediately after classes end", "assigned": "Superintendent/Conservator", "owner": "Shared (conservator + others)", "notes": "Affidavit of Ownership Template attached."}, {"n": 66, "action": "If the charter holder fails to comply with and property is transferred to the agency: (1). The appointed Board of Managers shall pass a resolution giving authority to the conservator/superintendent for closure to act on behalf of the agency to oversee the sale of the property. (2). The Superintendent for Closure/conservator will work with the Closed Charter Property Coordinator to sell the property.", "topic": "Real Property", "timeline": "Upon Conservator Placement/After Classes End/After Closure", "phase": "Upon placement", "assigned": "Conservator/TEA", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 67, "action": "Update electronic and paper student records (AAR, report cards, signed diplomas) and issue final report cards, diplomas, etc.", "topic": "Clerical/Records", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": "See instructions"}, {"n": 68, "action": "Provide parents/students with copies of final report cards.", "topic": "Clerical/Records", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 69, "action": "Prepare hard copies of student records for parents to pick up.", "topic": "Clerical/Records", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Unassigned", "owner": "Unassigned", "notes": ""}, {"n": 70, "action": "Provide parents/students with unique access codes to the Texas Assessment Management System (TAMS) website to access STAAR information when available during the summer following closure.", "topic": "Clerical/Records", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 71, "action": "Finalize and prepare student attendance data for TEA. (Item 32)", "topic": "Clerical/PEIMS", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 72, "action": "Prepare and submit to PEIMS the TSDS/PEIMS summer collection (student).", "topic": "Clerical/PEIMS", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 73, "action": "Secure valuable items (e.g., technology) in the most secure rooms.", "topic": "Property/Chattel", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 74, "action": "Prepare hard copies and electronic copies of student records for transfer to the local ESC. Submit to the conservator a student record transition plan, including the name and contact information of the person responsible for the completion of student records, including final grades. SECURE ALL FILES CONTAINING SSNs AND LABEL “CONFIDENTIAL.” Assemble and box hard copies of all student and staff records for transfer to local ESC for temporary storage: • box, and labeling each box with the charter school name, CDN, and box number (box x of xx). • Index records alphabetically by year. Prepare: • All personnel files, including service records and teacher certifications, • a chart of all personnel under contract; • Student attendance records as defined in the Student Attendance Accounting Handbook • All electronic files containing student attendance records, including files necessary for submission to the PEIMS • All Teacher Retirement System forms and supporting documentation", "topic": "Unspecified", "timeline": "", "phase": "Unspecified", "assigned": "Unassigned", "owner": "Unassigned", "notes": "https://tea.texas.gov/texas-schools/texas-schools-charter-schools/charter-school-resources-for-parents-and-students https://tealprod.tea.state.tx.us/Pirts/Public/NewPendingPIR.aspx"}, {"n": 75, "action": "Superintendent and conservator review the following items to be stored w/ charter holder: 1. The minutes of the meetings of the governing body 2. The policy manual 3. The administrative, accounting, and personnel procedures manuals 4. Bank statements, including canceled check 5 .All teacher schedules 6. Internal Revenue Service forms and supporting documentation 7. Corporate credit card statements and invoices 8. Accounting reports, budgets, journals, ledgers, registers, and petty cash report 9. Independent auditor annual financial reports 10.A list of all agreements, contracts, and shared service arrangements, including exhibits, amendments, and other supporting documentation, for transactions for the purchase of real property, equipment, software, services, etc. 11. Purchase requisitions and purchase vouchers, including supporting documentation (vendor invoices, store receipts etc.) 12.Reimbursement and travel vouchers, including travel vouchers and supporting documentation 13.All electronic files containing financial records, including files necessary for submission to PEIMS", "topic": "Clerical/Files/Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent/Conservator", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 76, "action": "Arrange for all personnel files to be delivered to the local ESC. (Including service records, teacher certifications, and a chart of all personnel)", "topic": "Clerical/Files", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 77, "action": "Notify the appropriate testing vendor of school closure, and return any testing material to TEA or the appropriate vendor.", "topic": "Clerical", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 78, "action": "Contract with local ESC or independent contractor to wipe FERPA data from computers. Receive written confirmation that the computers have been wiped from the ESC or contractor. This task shall be completed before these devices are distributed to other schools.", "topic": "Clerical", "timeline": "Immediately After Classes End", "phase": "Immediately after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 79, "action": "Update the list of creditors and debtors and any amounts accrued and unpaid with respect to such creditor or debtor, and make it available to the conservator and TEA. The list should include contractors to whom the school owes payment; lenders; mortgage holders and liens on the property; bondholders; equipment suppliers; secured and unsecured creditors; persons or organizations who owe the school fees or credits; lessees or sub-lessees of the school; any person or organization holding property of the school, and pending litigation.", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": "This is an update to the list provided Upon Conservator Placement"}, {"n": 80, "action": "Notify vendors and all other applicable parties of the termination of charter contracts. Note: Be aware that there may significant early termination fees when canceling contracts.", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 81, "action": "Contact debtors and demand payment.", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 82, "action": "Contact creditors to negotiate the settlement of debts.", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 83, "action": "Notify the management company (if applicable) of the termination of the charter contract. Request a final invoice. Provide a copy of this notification to the authorizer.", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 84, "action": "Complete Federal Expenditure Reports (FER) and Annual Performance Report (APR) and notify the conservator when the reports are complete. (see Vendor Notification in Forms)", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 85, "action": "Prepare all Internal Revenue Service forms and supporting documentation and notify the conservator when complete. (1). All W-2s and 1099s should be completed within 30 business days after classes end and distributed to employees (2). W-2s and 1099s that cannot be completed by the superintendent will become the responsibility of the charter holder", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 86, "action": "Provide the conservator with the current statement or account snapshot from all entities entitled to withholding from employees' paychecks. If those accounts are not current, identify the total amount due (including interest and penalties); the identity of the party who is owed the funds; and any enforcement action taken or threatened, including warrant holds at the State Comptroller's office and levies or intents to levy from the Internal Revenue Service.", "topic": "Clerical/Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 87, "action": "Develop a plan to make final payments for TRS; payroll for teachers and staff; employment/federal taxes; audit; creditors; etc", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": "https://www.trs.texas.gov/Pages/about_forms.aspx"}, {"n": 88, "action": "Determine if the 501(c)3 status will be maintained or dissolved and take the appropriate IRS notification/filing steps.", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": "If the school has a 501c3 status, it must take steps to maintain that status, including, but not limited to, the following: (1) notification to the IRS regarding any address change of the school corporation; and (2) filing of required tax returns or reports (e.g., IRS form 990 and Schedule A)."}, {"n": 89, "action": "If the school corporation proceeds to dissolution, notify the IRS of the dissolution of the education corporation and its 501c3 status and provide a copy to the TEA. Follow the guidance in the Texas Business Organizations", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent/Conservator", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 90, "action": "Code related to the disposition of financial records. * U.S. Department of Education (USDE) filings the USDE. CFR 80.41 *File federal form 269 or 269a if the school received funds directly from the USDE. CFR 80.4", "topic": "Financial", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Unassigned", "owner": "Unassigned", "notes": "U.S. Department of Education (USDE) filings the USDE. CFR 80.41 -provide updated link here or in the line items Attach forms"}, {"n": 91, "action": "Prepare and submit to PEIMS the TSDS/PEIMS fall collection (student) See deadline chart.", "topic": "PEIMS", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 92, "action": "File the final audit with TEA to close the school's general ledger. / No Later Than the date in the conservator directive", "topic": "Audit", "timeline": "Month After Classes End", "phase": "Month after classes end", "assigned": "Superintendent", "owner": "Superintendent", "notes": "https://tea.texas.gov/finance-and-grants/financial-compliance/annual-financial-and-compliance-report"}, {"n": 93, "action": "Prepare to have the property insurance transferred to the Conservator/Board of Managers.", "topic": "Real Property", "timeline": "Month After Closure", "phase": "After closure", "assigned": "Superintendent", "owner": "Superintendent", "notes": "Knowledge of this should have been provided Upon Conservator Placement"}, {"n": 94, "action": "Ensure that an insurance policy is in place (in accordance with TAC 100.1067(c)(i)(7) The policy will remain under the charter holder’s name after closure but will be controlled by the Conservator/BOM. Or, in the case of the property being transferred to TEA, make sure the insurance policy is transferred to the BOM", "topic": "Real Property", "timeline": "After Closure", "phase": "After closure", "assigned": "Board of Managers", "owner": "Board of Managers", "notes": ""}, {"n": 95, "action": "Ensure property insurance is maintained (timely payments, terms, conditions, etc.) until property disposition occurs.", "topic": "Real Property", "timeline": "After Closure", "phase": "After closure", "assigned": "Board of Managers", "owner": "Board of Managers", "notes": ""}, {"n": 96, "action": "Transfer school records from the local Education Service Center to Education Service Center Region 13.", "topic": "Clerical/Records", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 97, "action": "Oversee real property and other remaining assets until disposition by sale or transfer - where applicable:", "topic": "Real Property", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 98, "action": "Arrange for the return of remaining assets that are leased.", "topic": "Chattel/Real Property", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 99, "action": "Ensure the Final Federal Inventory List has been submitted to Federal Compliance at TEA via the EDGAR WorkApp platform and approved. Use the Final Federal Inventory List for disposition of chattel. Comply with all federal and state requirements for the disposition of equipment purchased with state and federal grant funds as outlined in the General and Fiscal Guidelines Use the Final Federal Inventory List for disposition of chattel and distribute any remaining personal property in coordination with the Division of Authorizing and Department of Federal Compliance", "topic": "Chattel", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": "https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR8feb98c2e3e5ad2/section-200.313 https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR8feb98c2e3e5ad2/section-200.314"}, {"n": 100, "action": "Secure the real property if it is not ready to be immediately sold or transferred. Change locks on all available doors and gates, secure remaining assets (such as school vehicles), contact local police concerning procedures for discouraging trespassers and make other security arrangements in consultation with TEA.", "topic": "Real Property", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 101, "action": "Update and discontinue existing ACH (automatic) payments that should no longer be made.", "topic": "Financial", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 102, "action": "Donate all food products to a non-profit or other recipient designated by TEA.", "topic": "Clerical", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 103, "action": "Forward mail.", "topic": "Unspecified", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 104, "action": "Arrange for ongoing payment of utility and other bills in consultation with TEA.", "topic": "Financial", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 105, "action": "Consolidate multiple bank accounts into a single account.", "topic": "Financial", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 106, "action": "Comply with all TEA requirements for receiving state/federal grant funds as outlined in federal and state laws/regulations, grant-specific provisions, and assurances, and as described on TEA's Grant Management Resources website and in the General and Fiscal Guidelines:", "topic": "Financial/Grants", "timeline": "Ongoing", "phase": "Ongoing", "assigned": "Conservator", "owner": "Conservator", "notes": "Agency will put charter on short-term high risk status; Grants will be placed on a global hold- Agency will send letter with instructions to Con/supt for accessing grant funds. Check titles here"}, {"n": 107, "action": "Uniform Commercial Code search. Disclose any security interest attached to any state property. The disclosure must identify the nature of the security interest and the property to which the security interest is attached.", "topic": "Financial", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 108, "action": "Disposition of real property and other remaining assets - where applicable, determine state requirements for real property acquired from a public school district to determine the right of first offer and other applicable requirements for disposition.", "topic": "Real Property", "timeline": "After Closure", "phase": "After closure", "assigned": "/Conservator/Board of Managers", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 109, "action": "Arrange for the return of remaining assets that are leased", "topic": "Unspecified", "timeline": "", "phase": "Unspecified", "assigned": "Unassigned", "owner": "Unassigned", "notes": ""}, {"n": 110, "action": "Provide the name of the individual in TEAL who is the charter school’s authorized official or designee on federal grant applications administered by TEA", "topic": "Unspecified", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 111, "action": "Submit monthly Progress Report and Expense Report to the Closed Charter Property Coordinator", "topic": "Clerical", "timeline": "Ongoing", "phase": "Ongoing", "assigned": "Conservator", "owner": "Conservator", "notes": "Template attached."}, {"n": 112, "action": "Prepare and submit to PEIMS the TSDS/PEIMS midyear collection (financial). See deadline graph", "topic": "PEIMS", "timeline": "After Closure", "phase": "After closure", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 113, "action": "Prepare and submit PEIMS Winter collection in accordance with the deadlines from TEA", "topic": "PEIMS", "timeline": "After Closure", "phase": "After closure", "assigned": "Superintendent", "owner": "Superintendent", "notes": ""}, {"n": 114, "action": "Notify TEA's AskTED administrator of closure (after the last PEIMS submission) so that the charter can be made obsolete in the agency's organizational database.", "topic": "Clerical", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator/Superintendent", "owner": "Shared (conservator + others)", "notes": ""}, {"n": 115, "action": "Upload Evidence of Closure files to the closing charter's file in SharePoint to correspond with the closure graph.", "topic": "Clerical", "timeline": "Ongoing/After Closure", "phase": "Ongoing", "assigned": "Conservator", "owner": "Conservator", "notes": ""}, {"n": 116, "action": "Transfer remaining funds to TEA as per instructions from the Division of Governance Interventions.", "topic": "Financial", "timeline": "After Closure", "phase": "After closure", "assigned": "Conservator", "owner": "Conservator", "notes": "ACH and Wire Transfer Forms attached"}];
+
+/* ---------- HELPERS ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const tip = $("#tip");
+function showTip(e, html){ tip.innerHTML = html; tip.style.display="block"; moveTip(e); }
+function moveTip(e){ const x = Math.min(e.clientX + 14, window.innerWidth - 300); tip.style.left = x+"px"; tip.style.top = (e.clientY + 14)+"px"; }
+function hideTip(){ tip.style.display="none"; }
+
+/* ---------- CHARTS (single-series horizontal bars) ---------- */
+function barChart(el, rows, total){
+  const labelW = 190, valW = 40, barH = 22, gap = 8, w = 560, h = rows.length*(barH+gap)+24;
+  const max = Math.max(...rows.map(r=>r[1]));
+  const plotW = w - labelW - valW - 8;
+  const ticks = [0, Math.ceil(max/2/5)*5, Math.ceil(max/5)*5].filter((v,i,a)=>a.indexOf(v)===i && v<=max*1.15);
+  let s = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Bar chart">`;
+  ticks.forEach(t=>{ const x = labelW + (t/max)*plotW; s += `<line class="grid" x1="${x}" y1="0" x2="${x}" y2="${h-20}"/><text class="tick" x="${x}" y="${h-6}" text-anchor="middle">${t}</text>`; });
+  s += `<line class="axis" x1="${labelW}" y1="0" x2="${labelW}" y2="${h-20}"/>`;
+  rows.forEach((r,i)=>{
+    const y = i*(barH+gap), bw = Math.max(2,(r[1]/max)*plotW);
+    const pct = Math.round(r[1]/total*100);
+    s += `<text class="lbl" x="${labelW-8}" y="${y+barH/2+4}" text-anchor="end">${esc(r[0])}</text>`;
+    s += `<rect class="bar" x="${labelW}" y="${y}" width="${bw}" height="${barH}" rx="0" data-t="${esc(r[0])}: ${r[1]} actions (${pct}%)"/>`;
+    s += `<text class="val" x="${labelW+bw+6}" y="${y+barH/2+4}">${r[1]}</text>`;
+  });
+  s += `</svg>`;
+  el.innerHTML = s;
+  el.querySelectorAll(".bar").forEach(b=>{
+    b.addEventListener("mouseenter", e=>showTip(e, b.dataset.t));
+    b.addEventListener("mousemove", moveTip);
+    b.addEventListener("mouseleave", hideTip);
+  });
+}
+barChart($("#chart-phase"), PHASES, 116);
+barChart($("#chart-owner"), OWNERS, 116);
+
+/* ---------- generic table renderer with chips + sort ---------- */
+function makeTable({tableId, rows, render, chipsId, countId, filterKey, sortDefault}){
+  const tbody = document.querySelector(`#${tableId} tbody`);
+  let chip = "all", sortK = sortDefault || null, sortDir = 1;
+  function view(){
+    let r = rows.filter(x => chip==="all" || x[filterKey]===chip);
+    if(sortK) r = [...r].sort((a,b)=> (a[sortK]>b[sortK]?1:a[sortK]<b[sortK]?-1:0)*sortDir);
+    tbody.innerHTML = r.map(render).join("");
+    if(countId) $("#"+countId).textContent = `${r.length} of ${rows.length}`;
+    applySearch();
+  }
+  if(chipsId){
+    document.querySelectorAll(`#${chipsId} .chip`).forEach(c=>c.addEventListener("click",()=>{
+      document.querySelectorAll(`#${chipsId} .chip`).forEach(x=>x.setAttribute("aria-pressed","false"));
+      c.setAttribute("aria-pressed","true"); chip = c.dataset.f; view();
+    }));
+  }
+  document.querySelectorAll(`#${tableId} th.sort`).forEach(th=>th.addEventListener("click",()=>{
+    const k = th.dataset.k; if(sortK===k) sortDir*=-1; else {sortK=k; sortDir=1;} view();
+  }));
+  view();
+}
+
+const urg = d => d<=7 ? ["critical","≤ 7 days"] : d<=30 ? ["serious","≤ 30 days"] : d<=90 ? ["warn","≤ 90 days"] : ["good","> 90 days"];
+makeTable({tableId:"dl-table", rows:DEADLINES, chipsId:"dl-chips", countId:"dl-count", filterKey:"group", sortDefault:"days",
+  render:d=>{ const [cls,lab]=urg(d.days); return `<tr><td class="num"><span class="pill ${cls}" title="${lab}">${esc(d.win)}</span></td><td>${esc(d.trigger)}</td><td>${esc(d.what)}</td><td>${esc(d.owner)}</td><td class="small muted">${esc(d.group)} · ${esc(d.src)}</td></tr>`; }});
+
+makeTable({tableId:"forms-table", rows:FORMS, sortDefault:"n",
+  render:f=>`<tr><td class="num">${f.n}</td><td><b>${esc(f.name)}</b></td><td>${esc(f.use)}</td><td class="num">${f.page}</td><td class="small">${f.file?esc(f.file):'<span class="muted">Handbook only</span>'}</td></tr>`});
+
+makeTable({tableId:"folder-table", rows:FOLDER, chipsId:"folder-chips", countId:"folder-count", filterKey:"kind", sortDefault:"file",
+  render:f=>`<tr><td><span>${esc(f.file)}</span></td><td><span class="pill">${esc(f.kind)}</span></td><td>${esc(f.desc)}</td><td class="num">${f.kb} KB</td></tr>`});
+
+makeTable({tableId:"law-table", rows:LAW, chipsId:"law-chips", countId:"law-count", filterKey:"group",
+  render:l=>`<tr><td class="cite"><a href="${l.url}" target="_blank" rel="noopener">${esc(l.cite)}</a></td><td><b>${esc(l.title)}</b></td><td>${esc(l.role)}</td><td><span class="pill">${esc(l.group)}</span></td><td class="small muted">${esc(l.by)}</td></tr>`});
+
+/* ---------- checklist explorer ---------- */
+(function(){
+  const rows = CHECKLIST;
+  const uniq = (k) => [...new Set(rows.map(r=>r[k]).filter(Boolean))];
+  const phaseOrder = ["Prior to placement","Upon placement","First month","Ongoing","Immediately after classes end","Month after classes end","After closure","Unspecified"];
+  const fill = (id, vals) => { const s=$(id); vals.forEach(v=>{const o=document.createElement("option");o.value=v;o.textContent=v;s.appendChild(o);}); };
+  fill("#ck-phase", phaseOrder.filter(p=>uniq("phase").includes(p)));
+  fill("#ck-owner", uniq("owner").sort());
+  fill("#ck-topic", uniq("topic").sort());
+  const tbody = document.querySelector("#ck-table tbody");
+  function view(){
+    const p=$("#ck-phase").value, o=$("#ck-owner").value, t=$("#ck-topic").value, q=$("#ck-q").value.trim().toLowerCase();
+    const r = rows.filter(x => (!p||x.phase===p) && (!o||x.owner===o) && (!t||x.topic===t) && (!q || (x.action+" "+x.notes+" "+x.assigned).toLowerCase().includes(q)));
+    tbody.innerHTML = r.map(x=>`<tr><td class="num">${x.n}</td><td class="small">${esc(x.phase)}<div class="muted" style="font-size:11px">${esc(x.timeline)}</div></td><td>${esc(x.action)}</td><td class="small">${esc(x.assigned)}</td><td class="small muted">${esc(x.topic)}</td><td class="small muted">${esc(x.notes)}</td></tr>`).join("");
+    $("#ck-count").textContent = `${r.length} of ${rows.length}`;
+    applySearch();
+  }
+  ["#ck-phase","#ck-owner","#ck-topic"].forEach(id=>$(id).addEventListener("change",view));
+  $("#ck-q").addEventListener("input",view);
+  view();
+})();
+
+/* ---------- global search: hides cards, table rows, contacts, notes that don't match ---------- */
+function applySearch(){
+  const q = $("#q").value.trim().toLowerCase();
+  const targets = document.querySelectorAll(".card, .contact, .note, tbody tr, .tile, .phase");
+  let shown=0, total=0;
+  targets.forEach(el=>{ total++; const hit = !q || el.textContent.toLowerCase().includes(q); el.classList.toggle("hidden-by-search", !hit); if(hit) shown++; });
+  $("#qcount").textContent = q ? `${shown} matches` : "";
+}
+$("#q").addEventListener("input", applySearch);
+try{ const saved = localStorage.getItem("cch-q"); if(saved){ $("#q").value = saved; } }catch(e){}
+$("#q").addEventListener("change", ()=>{ try{ localStorage.setItem("cch-q", $("#q").value); }catch(e){} });
+applySearch();
+</script>
+
+</body>
+</html>
